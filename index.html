@@ -1,956 +1,1674 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>LA Contractors - Brooksville Site Work & Pipe Utility Specialists</title>
-    <link rel="stylesheet" href="/style.css" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-              sans: ["Inter", "ui-sans-serif", "system-ui", "sans-serif"],
-              display: ["Outfit", "Inter", "sans-serif"],
-              mono: ["JetBrains Mono", "ui-monospace", "monospace"],
-            }
-          }
-        }
-      }
-    </script>
-  </head>
-  <body class="bg-slate-950 font-sans text-slate-100 antialiased selection:bg-orange-600 selection:text-white">
-    
-    <!-- Sticky Header Navigation -->
-    <header id="app-header" class="fixed top-0 left-0 right-0 z-40 bg-slate-950/90 backdrop-blur-md border-b-2 border-slate-900 transition-all duration-300">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-        
-        <!-- Logo & Brand -->
-        <a href="#home" class="flex items-center space-x-2.5 group" id="header-brand-logo">
-          <div class="bg-orange-600 text-white p-2 rounded-none font-bold">
-            <!-- HardHat Icon -->
-            <svg class="h-5 w-5 stroke-[2.5]" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M2 18a1 1 0 0 0 1 1h18a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v2z"/><path d="M10 10V5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v5"/><path d="M4 15V10a8 8 0 0 1 16 0v5"/></svg>
-          </div>
-          <span class="text-xl font-display font-black text-white tracking-tighter uppercase">LA CONTRACTORS</span>
-        </a>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LA Contractors • Brooksville's Site & Pipe Specialists</title>
+  
+  <!-- Main CSS3 Stylesheet -->
+  <link rel="stylesheet" href="/style.css" />
+  
+  <!-- Lucide Icons Library via CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
 
-        <!-- Desktop Navigation Links -->
-        <nav class="hidden md:flex items-center space-x-6 text-[11px] font-mono font-black uppercase tracking-widest" id="desktop-nav">
-          <a href="#home" class="text-orange-500 hover:text-orange-500 transition-colors">HOME</a>
-          <a href="#about" class="text-slate-400 hover:text-white transition-colors">ABOUT</a>
-          <a href="#services" class="text-slate-400 hover:text-white transition-colors">SERVICES</a>
-          <a href="#pricing" class="text-slate-400 hover:text-white transition-colors">PRICING</a>
-          <a href="#work" class="text-slate-400 hover:text-white transition-colors">OUR WORK</a>
-          <a href="#contact" class="text-slate-400 hover:text-white transition-colors">CONTACT</a>
-        </nav>
-
-        <!-- Desktop Action CTAs -->
-        <div class="hidden md:flex items-center space-x-4">
-          <a href="tel:8134626154" class="flex items-center space-x-1.5 text-slate-300 hover:text-orange-500 text-xs font-bold uppercase tracking-wider transition-colors" id="header-phone-link">
-            <svg class="h-4 w-4 text-orange-600 stroke-[2.5]" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-            <span>(813) 462-6154</span>
-          </a>
-          <a href="#contact" class="bg-orange-600 hover:bg-orange-700 text-white text-[10px] font-display font-black tracking-widest uppercase px-5 py-3 rounded-none transition-all duration-200" id="header-book-now-btn">
-            BOOK NOW
-          </a>
-        </div>
-
-        <!-- Mobile Menu Toggle Button -->
-        <button id="mobile-menu-toggle" class="md:hidden p-2 text-slate-400 hover:text-white focus:outline-none" aria-label="Toggle Navigation Menu">
-          <svg class="h-6 w-6 stroke-[2.5]" viewBox="0 0 24 24" fill="none" stroke="currentColor" id="hamburger-icon"><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="18" x2="20" y2="18"/></svg>
-          <svg class="h-6 w-6 stroke-[2.5] hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" id="close-icon"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-        </button>
-
-      </div>
-
-      <!-- Mobile Dropdown Navigation -->
-      <div id="mobile-menu" class="hidden md:hidden bg-slate-950 border-b-2 border-slate-900">
-        <div class="px-4 pt-2 pb-6 space-y-3 flex flex-col text-[12px] font-mono font-black tracking-widest uppercase">
-          <a href="#home" class="mobile-nav-link py-2 text-orange-500">HOME</a>
-          <a href="#about" class="mobile-nav-link py-2 text-slate-400 hover:text-white">ABOUT</a>
-          <a href="#services" class="mobile-nav-link py-2 text-slate-400 hover:text-white">SERVICES</a>
-          <a href="#pricing" class="mobile-nav-link py-2 text-slate-400 hover:text-white">PRICING</a>
-          <a href="#work" class="mobile-nav-link py-2 text-slate-400 hover:text-white">OUR WORK</a>
-          <a href="#contact" class="mobile-nav-link py-2 text-slate-400 hover:text-white">CONTACT</a>
-          <div class="pt-4 border-t border-slate-900 flex flex-col space-y-3">
-            <a href="tel:8134626154" class="flex items-center space-x-2 text-slate-300 font-bold uppercase tracking-wider text-[11px]">
-              <svg class="h-4 w-4 text-orange-500 stroke-[2.5]" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-              <span>CALL US: (813) 462-6154</span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </header>
-
-    <main id="app-main-content">
+  <!-- Sticky Top Header Navigation -->
+  <header id="app-header">
+    <div class="container header-container">
       
-      <!-- 1. Hero Section -->
-      <section id="home" class="relative min-h-screen flex items-center justify-center bg-slate-900 pt-28 overflow-hidden">
-        <!-- Background Image with Dark & Orange Overlay -->
-        <div class="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat transition-all duration-700 scale-100" style="background-image: url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1600&q=80')"></div>
-        <!-- Skew-x geometric overlay -->
-        <div class="absolute right-0 top-0 w-1/3 h-full bg-orange-600 opacity-15 skew-x-12 translate-x-20 z-10 pointer-events-none hidden lg:block"></div>
-        <div class="absolute inset-0 z-10 bg-slate-950/85"></div>
-        <div class="absolute inset-0 z-10 bg-gradient-to-t from-slate-950 via-transparent to-transparent"></div>
-
-        <div class="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24 w-full text-left">
-          <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            
-            <div class="lg:col-span-8 space-y-6">
-              <div class="inline-flex items-center space-x-2 bg-slate-950 border border-orange-600/40 px-4 py-2 rounded-none text-xs font-mono font-bold text-orange-500 tracking-widest uppercase shadow-lg" id="hero-badge">
-                <span class="h-2 w-2 rounded-full bg-orange-600 animate-pulse"></span>
-                <span>Brooksville's Trusted Site & Pipe Specialists</span>
-              </div>
-              
-              <h1 class="text-5xl sm:text-7xl lg:text-[110px] font-display font-black text-white tracking-tighter leading-none uppercase" id="hero-headline">
-                LA CONTRACTORS
-              </h1>
-              
-              <p class="text-base sm:text-lg lg:text-xl text-slate-300 max-w-2xl font-sans font-medium leading-relaxed" id="hero-paragraph">
-                Building the foundation for Florida's future. From comprehensive site development and heavy earth moving to precision underground pipe installation, we deliver Brooksville's most reliable and professional commercial contracting work.
-              </p>
-
-              <div class="flex flex-col sm:flex-row gap-4 pt-4" id="hero-cta-group">
-                <a href="#contact" class="bg-orange-600 hover:bg-orange-700 text-white font-display font-black text-xs tracking-widest uppercase px-10 py-5 rounded-none shadow-2xl transition-all duration-200 hover:-translate-y-0.5 flex items-center justify-center space-x-2">
-                  <span>BOOK NOW</span>
-                  <svg class="h-4 w-4 stroke-[3]" viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-                </a>
-                <a href="#work" class="bg-slate-950/80 hover:bg-slate-900 text-white border-2 border-slate-700 hover:border-orange-600 font-display font-bold text-xs tracking-widest uppercase px-8 py-5 rounded-none transition-all duration-200 flex items-center justify-center space-x-2">
-                  <span>EXPLORE PROJECTS</span>
-                </a>
-              </div>
-
-              <!-- Trust Badges -->
-              <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-12 max-w-lg border-t-2 border-slate-800" id="hero-trust-badges">
-                <div class="flex items-center space-x-3">
-                  <svg class="h-6 w-6 text-orange-600 flex-shrink-0 stroke-[2]" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                  <div>
-                    <h4 class="text-xs font-black uppercase tracking-wider text-white">Licensed & Insured</h4>
-                    <p class="text-[10px] text-slate-400 font-mono">State of Florida</p>
-                  </div>
-                </div>
-                <div class="flex items-center space-x-3">
-                  <svg class="h-6 w-6 text-orange-600 flex-shrink-0 stroke-[2]" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
-                  <div>
-                    <h4 class="text-xs font-black uppercase tracking-wider text-white">Community Pillar</h4>
-                    <p class="text-[10px] text-slate-400 font-mono">Brooksville Proud</p>
-                  </div>
-                </div>
-                <div class="hidden sm:flex items-center space-x-3">
-                  <svg class="h-6 w-6 text-orange-600 flex-shrink-0 stroke-[2]" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M2 18a1 1 0 0 0 1 1h18a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v2z"/><path d="M10 10V5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v5"/><path d="M4 15V10a8 8 0 0 1 16 0v5"/></svg>
-                  <div>
-                    <h4 class="text-xs font-black uppercase tracking-wider text-white">Heavy Machinery</h4>
-                    <p class="text-[10px] text-slate-400 font-mono">Full Fleet Available</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Side Box containing Local Pride -->
-            <div class="lg:col-span-4 hidden lg:block" id="hero-sidebox">
-              <div class="bg-slate-950 border-t-4 border-orange-600 rounded-none p-6 shadow-2xl relative overflow-hidden">
-                <div class="relative z-10 space-y-4">
-                  <h3 class="font-display font-black text-sm uppercase tracking-wider text-white border-b border-slate-800 pb-2">
-                    Why Brooksville Contracts LA
-                  </h3>
-                  <div class="space-y-3">
-                    <div class="p-3 bg-slate-900/60 rounded-none border-l-2 border-orange-600">
-                      <span class="text-orange-500 font-mono text-[10px] font-black block tracking-widest">01 / GEOGRAPHY</span>
-                      <p class="text-xs text-slate-300 mt-1 leading-relaxed">Deep familiarity with Hernando County geological conditions and code compliance.</p>
-                    </div>
-                    <div class="p-3 bg-slate-900/60 rounded-none border-l-2 border-orange-600">
-                      <span class="text-orange-500 font-mono text-[10px] font-black block tracking-widest">02 / INTEGRITY</span>
-                      <p class="text-xs text-slate-300 mt-1 leading-relaxed">Veteran operators committed to finishing on budget with no hidden fees.</p>
-                    </div>
-                    <div class="p-3 bg-slate-900/60 rounded-none border-l-2 border-orange-600">
-                      <span class="text-orange-500 font-mono text-[10px] font-black block tracking-widest">03 / PERFORMANCE</span>
-                      <p class="text-xs text-slate-300 mt-1 leading-relaxed">State-of-the-art pipe lasers, grade controls, and modern excavating machinery.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-          </div>
+      <!-- Logo brand block -->
+      <div class="logo" id="logo-container" onclick="scrollToSection('home')">
+        <div class="logo-icon">
+          <i data-lucide="hard-hat"></i>
         </div>
-
-        <div class="absolute bottom-0 left-0 right-0 h-1.5 bg-orange-600"></div>
-      </section>
-
-      <!-- 2. About Section -->
-      <section id="about" class="py-20 sm:py-28 bg-white border-b border-slate-200 text-slate-900 relative">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            
-            <!-- Left Column: Visual Showcase & Stats -->
-            <div class="lg:col-span-5 space-y-6" id="about-left-col">
-              <div class="relative">
-                <div class="absolute -inset-1.5 bg-orange-600 opacity-25"></div>
-                <div class="relative rounded-none overflow-hidden shadow-xl border-2 border-slate-900 bg-slate-950">
-                  <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=700&q=80" alt="LA Contractors Crew" class="w-full h-80 object-cover opacity-90 hover:scale-105 transition-transform duration-500" />
-                  <div class="absolute bottom-4 left-4 bg-slate-950 border-l-4 border-orange-600 px-4 py-3 shadow-lg flex items-center space-x-3 rounded-none">
-                    <svg class="h-5 w-5 text-orange-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-                    <div>
-                      <h4 class="text-[10px] font-mono font-black text-orange-500 uppercase tracking-widest">Brooksville Roots</h4>
-                      <p class="text-xs text-white font-bold">40+ Local Employees</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Quick Stat Blocks -->
-              <div class="grid grid-cols-3 gap-4 text-center">
-                <div class="bg-slate-50 p-4 border-2 border-slate-900 rounded-none">
-                  <div class="text-3xl font-display font-black text-orange-600">20+</div>
-                  <div class="text-[10px] text-slate-800 font-mono font-black uppercase mt-1 tracking-widest">Years Active</div>
-                </div>
-                <div class="bg-slate-50 p-4 border-2 border-slate-900 rounded-none">
-                  <div class="text-3xl font-display font-black text-orange-600">450+</div>
-                  <div class="text-[10px] text-slate-800 font-mono font-black uppercase mt-1 tracking-widest">Jobs Done</div>
-                </div>
-                <div class="bg-slate-50 p-4 border-2 border-slate-900 rounded-none">
-                  <div class="text-3xl font-display font-black text-orange-600">100%</div>
-                  <div class="text-[10px] text-slate-800 font-mono font-black uppercase mt-1 tracking-widest">On-Spec</div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Right Column: Narrative & Interactive Tabs -->
-            <div class="lg:col-span-7 space-y-6" id="about-right-col">
-              <div class="space-y-3">
-                <span class="text-xs font-mono text-orange-600 font-black uppercase tracking-widest block">MEET LA CONTRACTORS</span>
-                <h2 class="text-4xl sm:text-5xl font-display font-black text-slate-950 tracking-tighter leading-tight uppercase">
-                  Our Foundation is the Brooksville Community
-                </h2>
-                <p class="text-base text-slate-700 font-medium leading-relaxed max-w-2xl">
-                  We believe a contract is more than a handshake—it is a community obligation. We handle heavy site preparations, laying high-integrity storm and sanitary lines, with clear transparency and local goodwill.
-                </p>
-              </div>
-
-              <!-- Tab Nav Buttons -->
-              <div class="flex flex-wrap gap-2 border-b-2 border-slate-200 pb-2">
-                <button id="tab-btn-history" class="about-tab-btn flex items-center space-x-2 px-4 py-3 rounded-none text-xs font-black tracking-widest uppercase border-2 bg-orange-600 border-orange-600 text-white shadow-md" data-tab="history">
-                  <svg class="h-4 w-4 stroke-[2.5]" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
-                  <span>OUR STORY</span>
-                </button>
-                <button id="tab-btn-values" class="about-tab-btn flex items-center space-x-2 px-4 py-3 rounded-none text-xs font-black tracking-widest uppercase border-2 text-slate-700 bg-white border-slate-300 hover:text-slate-950 hover:bg-slate-50" data-tab="values">
-                  <svg class="h-4 w-4 stroke-[2.5]" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                  <span>OUR WORKMANSHIP</span>
-                </button>
-                <button id="tab-btn-community" class="about-tab-btn flex items-center space-x-2 px-4 py-3 rounded-none text-xs font-black tracking-widest uppercase border-2 text-slate-700 bg-white border-slate-300 hover:text-slate-950 hover:bg-slate-50" data-tab="community">
-                  <svg class="h-4 w-4 stroke-[2.5]" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-                  <span>COMMUNITY PILLAR</span>
-                </button>
-              </div>
-
-              <!-- Tab Content Card -->
-              <div id="about-tab-content-panel" class="bg-slate-50 p-6 rounded-none border-2 border-slate-900 space-y-4">
-                <div>
-                  <span id="tab-subtitle" class="text-[10px] font-mono text-orange-600 font-black tracking-widest uppercase block">Serving Hernando County since 2004</span>
-                  <h3 id="tab-title" class="text-2xl font-display font-black text-slate-950 mt-1 uppercase tracking-tight">Roots in Brooksville, Built on Trust</h3>
-                </div>
-                <p id="tab-desc" class="text-sm text-slate-700 font-medium leading-relaxed">
-                  Founded as a small family operation, LA Contractors has grown to become Brooksville’s premier choice for site work and utility infrastructure. We started with a single backhoe and a promise: treat every jobsite like it’s in our own backyard. Over two decades later, we have laid hundreds of miles of underground pipe and shaped the ground for local neighborhoods, shopping centers, and parks.
-                </p>
-                <ul id="tab-bullets" class="space-y-2 pt-2">
-                  <!-- Generated Bullets -->
-                  <li class="flex items-start space-x-2.5 text-xs text-slate-800 font-semibold"><svg class="h-5 w-5 text-orange-600 flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg><span>Over 20 years of active local operation</span></li>
-                  <li class="flex items-start space-x-2.5 text-xs text-slate-800 font-semibold"><svg class="h-5 w-5 text-orange-600 flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg><span>Built on client referrals and long-term contracts</span></li>
-                  <li class="flex items-start space-x-2.5 text-xs text-slate-800 font-semibold"><svg class="h-5 w-5 text-orange-600 flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg><span>100% locally owned and operated in Florida</span></li>
-                </ul>
-              </div>
-            </div>
-
-          </div>
+        <div>
+          <span class="logo-text">LA.C</span>
+          <span class="logo-subtext">LA CONTRACTORS</span>
         </div>
-      </section>
+      </div>
 
-      <!-- 3. Services Section -->
-      <section id="services" class="py-20 sm:py-28 bg-slate-950 text-white relative border-b border-slate-900">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <!-- Desktop Navigation links -->
+      <nav class="desktop-nav" id="desktop-nav">
+        <button id="nav-home" class="active" onclick="scrollToSection('home')">HOME</button>
+        <button id="nav-about" onclick="scrollToSection('about')">ABOUT</button>
+        <button id="nav-services" onclick="scrollToSection('services')">SERVICES</button>
+        <button id="nav-pricing" onclick="scrollToSection('pricing')">PRICING</button>
+        <button id="nav-work" onclick="scrollToSection('work')">WORK</button>
+        <button id="nav-contact" onclick="scrollToSection('contact')">CONTACT</button>
+      </nav>
+
+      <!-- Desktop CTAs -->
+      <div class="header-actions">
+        <a href="tel:8134626154" class="header-phone" id="header-phone-link">
+          <i data-lucide="phone"></i>
+          <span>(813) 462-6154</span>
+        </a>
+        <button id="header-book-now-btn" class="btn-orange" onclick="scrollToSection('contact')">
+          <i data-lucide="calendar"></i>
+          <span>BOOK NOW</span>
+        </button>
+      </div>
+
+      <!-- Mobile navigation menu bars and buttons -->
+      <div class="mobile-header-actions">
+        <a href="tel:8134626154" class="mobile-phone-btn" aria-label="Call LA Contractors">
+          <i data-lucide="phone"></i>
+        </a>
+        <button id="mobile-menu-toggle" class="mobile-menu-toggle" onclick="toggleMobileMenu()" aria-label="Toggle Navigation Menu">
+          <i data-lucide="menu" id="mobile-menu-icon"></i>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Drawer Menu Panel -->
+    <div class="mobile-menu-drawer" id="mobile-menu-drawer">
+      <button id="mobile-nav-home" class="active" onclick="mobileNavigate('home')">HOME</button>
+      <button id="mobile-nav-about" onclick="mobileNavigate('about')">ABOUT</button>
+      <button id="mobile-nav-services" onclick="mobileNavigate('services')">SERVICES</button>
+      <button id="mobile-nav-pricing" onclick="mobileNavigate('pricing')">PRICING</button>
+      <button id="mobile-nav-work" onclick="mobileNavigate('work')">WORK</button>
+      <button id="mobile-nav-contact" onclick="mobileNavigate('contact')">CONTACT</button>
+      <div class="mobile-drawer-footer">
+        <div class="mobile-drawer-phone">
+          <i data-lucide="phone"></i>
+          <span>Call us: (813) 462-6154</span>
+        </div>
+        <button id="mobile-book-now-btn" class="btn-orange" onclick="mobileNavigate('contact')">
+          <i data-lucide="calendar"></i>
+          <span>BOOK NOW</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main content wrapper -->
+  <main id="app-main-content">
+
+    <!-- 1. HERO SECTION -->
+    <section id="home" class="hero-section">
+      <!-- Background photo area with overlay gradients -->
+      <div class="hero-bg"></div>
+      <div class="hero-skew-accent"></div>
+      <div class="hero-overlay-dark"></div>
+      <div class="hero-overlay-grad"></div>
+
+      <div class="container hero-content">
+        <div class="hero-grid">
           
-          <div class="text-center space-y-4 mb-16 max-w-3xl mx-auto">
-            <span class="text-xs font-mono text-orange-500 font-black tracking-widest block uppercase">OUR CAPABILITIES</span>
-            <h2 class="text-4xl sm:text-5xl font-display font-black tracking-tighter uppercase">Our Primary Programs & Services</h2>
-            <div class="h-1.5 w-20 bg-orange-600 mx-auto"></div>
-            <p class="text-sm sm:text-base text-slate-300 leading-relaxed font-medium">
-              LA Contractors offers full-scale heavy site solutions. We own our fleet, hire local operators, and guarantee a standard of Brooksville work that stands the test of time.
+          <!-- Heading Column -->
+          <div class="hero-main-col">
+            <!-- Tag Badge -->
+            <div class="hero-badge" id="hero-badge">
+              <span class="pulse-dot"></span>
+              <span>Brooksville's Trusted Site & Pipe Specialists</span>
+            </div>
+
+            <!-- Bold Headline title -->
+            <h1 class="hero-headline" id="hero-headline">LA CONTRACTORS</h1>
+
+            <!-- Supporting summary paragraph -->
+            <p class="hero-paragraph" id="hero-paragraph">
+              Building the foundation for Florida's future. From comprehensive site development and heavy earth moving to precision underground pipe installation, we deliver Brooksville's most reliable and professional commercial contracting work.
             </p>
-          </div>
 
-          <!-- Services Grid -->
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-8" id="services-cards-grid">
-            
-            <!-- Site Dev Card -->
-            <div class="bg-slate-900 border-2 border-slate-800 rounded-none overflow-hidden shadow-2xl flex flex-col h-full group hover:border-orange-600/60" id="service-card-site-dev">
-              <div class="relative h-48 overflow-hidden bg-slate-950">
-                <div class="absolute inset-0 bg-slate-900/40 group-hover:bg-slate-900/10 transition-colors duration-300 z-10"></div>
-                <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=600&q=80" alt="Site Development" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
-                <div class="absolute top-4 left-4 z-20 bg-orange-600 p-3 rounded-none">
-                  <svg class="h-6 w-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 18a1 1 0 0 0 1 1h18a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v2z"/><path d="M10 10V5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v5"/><path d="M4 15V10a8 8 0 0 1 16 0v5"/></svg>
-                </div>
-              </div>
-              <div class="p-6 flex flex-col flex-grow space-y-4">
-                <div>
-                  <h3 class="text-xl font-display font-black text-white uppercase group-hover:text-orange-500 transition-colors">Site Development</h3>
-                  <p class="text-xs font-mono text-slate-400 mt-1 uppercase font-bold">Estimate: <span class="text-orange-500 font-extrabold">$5,000 - $150,000+</span></p>
-                </div>
-                <p class="text-xs text-slate-300 leading-relaxed flex-grow font-medium">Comprehensive clearing, excavation, and structural grading for commercial and residential foundations.</p>
-                <div class="space-y-1.5 pt-3 border-t-2 border-slate-800">
-                  <div class="flex items-center space-x-2 text-[11px] text-slate-300 font-semibold"><svg class="h-4 w-4 text-orange-500 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg><span>Site Clearing & Grubbing</span></div>
-                  <div class="flex items-center space-x-2 text-[11px] text-slate-300 font-semibold"><svg class="h-4 w-4 text-orange-500 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg><span>Erosion Control & Silt Fencing</span></div>
-                  <div class="flex items-center space-x-2 text-[11px] text-slate-300 font-semibold"><svg class="h-4 w-4 text-orange-500 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg><span>Mass Earthwork & Grading</span></div>
-                </div>
-                <div class="flex gap-2 pt-2">
-                  <button class="service-details-btn flex-1 bg-slate-800 hover:bg-slate-700 text-white font-mono text-[10px] font-black tracking-widest uppercase py-3 rounded-none border-2 border-slate-700 transition-all flex items-center justify-center space-x-1" data-service="site-dev">
-                    <span>DETAILS</span>
-                    <svg class="h-3.5 w-3.5 text-orange-500 stroke-[3]" viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="9 18 15 12 9 6"/></svg>
-                  </button>
-                  <button class="service-book-btn flex-1 bg-orange-600 hover:bg-orange-700 text-white font-display font-black text-[10px] tracking-widest uppercase py-3 rounded-none transition-all" data-service-name="Site Development">BOOK NOW</button>
-                </div>
-              </div>
-            </div>
-
-            <!-- Pipe Install Card -->
-            <div class="bg-slate-900 border-2 border-slate-800 rounded-none overflow-hidden shadow-2xl flex flex-col h-full group hover:border-orange-600/60" id="service-card-pipe-install">
-              <div class="relative h-48 overflow-hidden bg-slate-950">
-                <div class="absolute inset-0 bg-slate-900/40 group-hover:bg-slate-900/10 transition-colors duration-300 z-10"></div>
-                <img src="https://images.unsplash.com/photo-1581094288338-2314dddb7ecc?auto=format&fit=crop&w=600&q=80" alt="Pipe Installation" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
-                <div class="absolute top-4 left-4 z-20 bg-orange-600 p-3 rounded-none">
-                  <svg class="h-6 w-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="3" width="7" height="9"/><rect x="14" y="3" width="7" height="5"/><rect x="14" y="12" width="7" height="9"/><rect x="3" y="16" width="7" height="5"/></svg>
-                </div>
-              </div>
-              <div class="p-6 flex flex-col flex-grow space-y-4">
-                <div>
-                  <h3 class="text-xl font-display font-black text-white uppercase group-hover:text-orange-500 transition-colors">Pipe Installation</h3>
-                  <p class="text-xs font-mono text-slate-400 mt-1 uppercase font-bold">Estimate: <span class="text-orange-500 font-extrabold">$8,000 - $200,000+</span></p>
-                </div>
-                <p class="text-xs text-slate-300 leading-relaxed flex-grow font-medium">High-integrity storm drainage, sewer lines, fire mains, and underground potable water mains.</p>
-                <div class="space-y-1.5 pt-3 border-t-2 border-slate-800">
-                  <div class="flex items-center space-x-2 text-[11px] text-slate-300 font-semibold"><svg class="h-4 w-4 text-orange-500 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg><span>Stormwater RCP Pipe</span></div>
-                  <div class="flex items-center space-x-2 text-[11px] text-slate-300 font-semibold"><svg class="h-4 w-4 text-orange-500 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg><span>Gravity Sanitary Sewers</span></div>
-                  <div class="flex items-center space-x-2 text-[11px] text-slate-300 font-semibold"><svg class="h-4 w-4 text-orange-500 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg><span>potable Water Service Mains</span></div>
-                </div>
-                <div class="flex gap-2 pt-2">
-                  <button class="service-details-btn flex-1 bg-slate-800 hover:bg-slate-700 text-white font-mono text-[10px] font-black tracking-widest uppercase py-3 rounded-none border-2 border-slate-700 transition-all flex items-center justify-center space-x-1" data-service="pipe-install">
-                    <span>DETAILS</span>
-                    <svg class="h-3.5 w-3.5 text-orange-500 stroke-[3]" viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="9 18 15 12 9 6"/></svg>
-                  </button>
-                  <button class="service-book-btn flex-1 bg-orange-600 hover:bg-orange-700 text-white font-display font-black text-[10px] tracking-widest uppercase py-3 rounded-none transition-all" data-service-name="Pipe Installation">BOOK NOW</button>
-                </div>
-              </div>
-            </div>
-
-            <!-- Material Sales Card -->
-            <div class="bg-slate-900 border-2 border-slate-800 rounded-none overflow-hidden shadow-2xl flex flex-col h-full group hover:border-orange-600/60" id="service-card-material-sales">
-              <div class="relative h-48 overflow-hidden bg-slate-950">
-                <div class="absolute inset-0 bg-slate-900/40 group-hover:bg-slate-900/10 transition-colors duration-300 z-10"></div>
-                <img src="https://images.unsplash.com/photo-1578328819058-b69f3a3b0f6b?auto=format&fit=crop&w=600&q=80" alt="Material Sales" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
-                <div class="absolute top-4 left-4 z-20 bg-orange-600 p-3 rounded-none">
-                  <svg class="h-6 w-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
-                </div>
-              </div>
-              <div class="p-6 flex flex-col flex-grow space-y-4">
-                <div>
-                  <h3 class="text-xl font-display font-black text-white uppercase group-hover:text-orange-500 transition-colors">Material Sales</h3>
-                  <p class="text-xs font-mono text-slate-400 mt-1 uppercase font-bold">Estimate: <span class="text-orange-500 font-extrabold">$350 - $4,500+</span></p>
-                </div>
-                <p class="text-xs text-slate-300 leading-relaxed flex-grow font-medium">Direct dispatch of lime rock, crushed aggregate, screened fill-dirt, washed sand, and topsoil.</p>
-                <div class="space-y-1.5 pt-3 border-t-2 border-slate-800">
-                  <div class="flex items-center space-x-2 text-[11px] text-slate-300 font-semibold"><svg class="h-4 w-4 text-orange-500 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg><span>Florida DOT Lime Rock</span></div>
-                  <div class="flex items-center space-x-2 text-[11px] text-slate-300 font-semibold"><svg class="h-4 w-4 text-orange-500 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg><span>#57 Crushed Aggregate</span></div>
-                  <div class="flex items-center space-x-2 text-[11px] text-slate-300 font-semibold"><svg class="h-4 w-4 text-orange-500 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg><span>Clean Elevation Fill-Dirt</span></div>
-                </div>
-                <div class="flex gap-2 pt-2">
-                  <button class="service-details-btn flex-1 bg-slate-800 hover:bg-slate-700 text-white font-mono text-[10px] font-black tracking-widest uppercase py-3 rounded-none border-2 border-slate-700 transition-all flex items-center justify-center space-x-1" data-service="material-sales">
-                    <span>DETAILS</span>
-                    <svg class="h-3.5 w-3.5 text-orange-500 stroke-[3]" viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="9 18 15 12 9 6"/></svg>
-                  </button>
-                  <button class="service-book-btn flex-1 bg-orange-600 hover:bg-orange-700 text-white font-display font-black text-[10px] tracking-widest uppercase py-3 rounded-none transition-all" data-service-name="Material Sales">BOOK NOW</button>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-        <!-- Detailed Modal Overlay -->
-        <div id="service-details-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md hidden">
-          <div class="bg-slate-900 border-2 border-slate-800 w-full max-w-2xl rounded-none overflow-hidden shadow-2xl max-h-[90vh] flex flex-col">
-            <div class="relative h-56 bg-slate-950">
-              <img id="modal-img" src="" alt="" class="w-full h-full object-cover opacity-80" />
-              <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-slate-900/50"></div>
-              <button id="close-service-modal" class="absolute top-4 right-4 bg-slate-900 border-2 border-slate-700 p-2 rounded-none text-slate-300 hover:text-white hover:bg-slate-800 transition-colors">
-                <svg class="h-4.5 w-4.5 stroke-[2.5]" viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            <!-- Buttons triggers -->
+            <div class="hero-cta-group" id="hero-cta-group">
+              <button class="btn-orange" onclick="scrollToSection('contact')">
+                <span>BOOK NOW</span>
+                <i data-lucide="arrow-right"></i>
               </button>
-              <div class="absolute bottom-6 left-6 right-6">
-                <span class="bg-orange-600 text-white text-[10px] font-mono font-black tracking-widest uppercase px-3 py-1 border border-orange-500/20 rounded-none">PRESTIGE PROGRAM</span>
-                <h3 id="modal-title" class="text-2xl sm:text-3xl font-display font-black text-white mt-2 uppercase tracking-tight"></h3>
-              </div>
-            </div>
-            <div class="p-6 sm:p-8 space-y-6 overflow-y-auto">
-              <div class="space-y-2">
-                <h4 class="text-xs font-mono text-orange-500 font-black uppercase tracking-widest">PROGRAM DESCRIPTION & CAPABILITY</h4>
-                <p id="modal-desc" class="text-sm text-slate-300 leading-relaxed font-medium"></p>
-              </div>
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4 border-t-2 border-slate-800">
-                <div class="space-y-3">
-                  <h4 class="text-xs font-mono text-slate-400 font-black uppercase tracking-widest">OUR INCLUDED WORK SCOPES</h4>
-                  <ul id="modal-specs" class="space-y-2">
-                    <!-- JS Injected specs -->
-                  </ul>
-                </div>
-                <div class="bg-slate-950 p-4 rounded-none border-2 border-slate-800 flex flex-col justify-between">
-                  <div class="space-y-2">
-                    <span class="text-[10px] font-mono text-slate-400 uppercase tracking-widest block font-black">ESTIMATED CONTRACT RANGE</span>
-                    <div id="modal-price" class="text-2xl font-display font-black text-orange-500"></div>
-                    <p class="text-[11px] text-slate-400 leading-relaxed">Prices depend on geological factors, permits, size, and utility diameter specifications. Contact us for a free engineered site assessment.</p>
-                  </div>
-                  <div class="flex gap-2 pt-4">
-                    <a href="tel:8134626154" class="px-3 py-2.5 rounded-none bg-slate-800 hover:bg-slate-700 text-slate-300 border-2 border-slate-700 flex items-center justify-center"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></a>
-                    <button id="modal-book-btn" class="flex-1 bg-orange-600 hover:bg-orange-700 text-white font-display font-black text-xs tracking-widest uppercase py-2.5 rounded-none transition-colors">BOOK SERVICES NOW</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- 4. Cost Estimator Section -->
-      <section id="pricing" class="py-20 sm:py-28 bg-slate-50 border-b border-slate-200 text-slate-900 relative">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          
-          <div class="text-center space-y-4 mb-14 max-w-3xl mx-auto">
-            <span class="text-xs font-mono text-orange-600 font-black tracking-widest block uppercase">TRANSPARENT VALUE</span>
-            <h2 class="text-4xl sm:text-5xl font-display font-black tracking-tighter text-slate-950 uppercase">Interactive Cost Estimator</h2>
-            <div class="h-1.5 w-20 bg-orange-600 mx-auto"></div>
-            <p class="text-sm sm:text-base text-slate-700 font-medium">
-              Get an instant budget ballpark based on standard Brooksville material rates and heavy equipment crew dispatch times. Use our selector below to build your contract scope.
-            </p>
-          </div>
-
-          <!-- Estimator Card Layout -->
-          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 max-w-5xl mx-auto">
-            
-            <!-- Controls (7 columns) -->
-            <div class="lg:col-span-7 bg-white p-6 sm:p-8 border-2 border-slate-900 rounded-none space-y-6 shadow-xl">
-              <div class="space-y-3">
-                <h3 class="text-xs font-mono font-black text-slate-400 uppercase tracking-widest">STEP 1: SELECT CORE PROGRAM</h3>
-                <div class="grid grid-cols-3 gap-2">
-                  <button id="calc-tab-site" class="calc-service-tab py-3.5 px-2 rounded-none text-[10px] font-black tracking-widest uppercase text-center border-2 bg-slate-950 border-slate-950 text-white" data-calc="site">SITE WORK</button>
-                  <button id="calc-tab-pipe" class="calc-service-tab py-3.5 px-2 rounded-none text-[10px] font-black tracking-widest uppercase text-center border-2 bg-white border-slate-300 text-slate-700 hover:bg-slate-50" data-calc="pipe">PIPE RUN</button>
-                  <button id="calc-tab-materials" class="calc-service-tab py-3.5 px-2 rounded-none text-[10px] font-black tracking-widest uppercase text-center border-2 bg-white border-slate-300 text-slate-700 hover:bg-slate-50" data-calc="materials">MATERIALS</button>
-                </div>
-              </div>
-
-              <!-- Site Dev Controls -->
-              <div id="calc-inputs-site" class="space-y-4">
-                <div class="flex justify-between items-center">
-                  <label class="text-xs font-mono font-black text-slate-700 uppercase tracking-widest">Site Acreage Scope</label>
-                  <span id="site-acreage-val" class="text-sm font-mono font-black text-orange-600 bg-orange-50 px-2.5 py-1 border border-orange-200">1 Acre(s)</span>
-                </div>
-                <input id="site-acreage" type="range" min="1" max="10" step="1" value="1" class="w-full accent-orange-600" />
-                <div class="flex justify-between text-[10px] text-slate-400 font-mono font-bold">
-                  <span>1 ACRE (EXCAVATION/STABILIZATION)</span>
-                  <span>10 ACRES (HEAVY MACHINERY COMM.)</span>
-                </div>
-              </div>
-
-              <!-- Pipe Install Controls -->
-              <div id="calc-inputs-pipe" class="space-y-4 hidden">
-                <div class="flex justify-between items-center">
-                  <label class="text-xs font-mono font-black text-slate-700 uppercase tracking-widest">Pipe Run Length (Linear Feet)</label>
-                  <span id="pipe-lf-val" class="text-sm font-mono font-black text-orange-600 bg-orange-50 px-2.5 py-1 border border-orange-200">100 LF</span>
-                </div>
-                <input id="pipe-linear-feet" type="range" min="50" max="1000" step="50" value="100" class="w-full accent-orange-600" />
-                <div class="flex justify-between text-[10px] text-slate-400 font-mono font-bold">
-                  <span>50 LF (SANITARY LINE RES.)</span>
-                  <span>1,000 LF (MUNICIPAL HIGH-CAPACITY RCP)</span>
-                </div>
-              </div>
-
-              <!-- Materials Controls -->
-              <div id="calc-inputs-materials" class="space-y-4 hidden">
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div class="space-y-1.5">
-                    <label class="text-xs font-mono font-black text-slate-700 uppercase tracking-widest block">Material Type</label>
-                    <select id="material-type" class="w-full bg-slate-50 border-2 border-slate-200 rounded-none px-4 py-3 text-sm font-bold">
-                      <option value="limerock">DOT Lime Rock ($380/load)</option>
-                      <option value="crushed">#57 Crushed Concrete ($450/load)</option>
-                      <option value="filldirt">Structural Fill-Dirt ($280/load)</option>
-                      <option value="topsoil">Gardening Topsoil ($350/load)</option>
-                    </select>
-                  </div>
-                  <div class="space-y-1.5">
-                    <div class="flex justify-between">
-                      <label class="text-xs font-mono font-black text-slate-700 uppercase tracking-widest">Loads (Semi-Dump)</label>
-                      <span id="material-loads-val" class="text-xs font-mono font-black text-orange-600">5 Loads</span>
-                    </div>
-                    <input id="material-loads" type="range" min="1" max="100" step="1" value="5" class="w-full accent-orange-600 mt-3" />
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Estimator Invoice Panel (5 columns) -->
-            <div class="lg:col-span-5 bg-slate-950 text-white p-6 sm:p-8 border-2 border-slate-950 rounded-none flex flex-col justify-between shadow-2xl relative">
-              <div class="space-y-6">
-                <div class="border-b border-slate-800 pb-4">
-                  <span class="text-[9px] font-mono text-orange-500 font-black tracking-widest uppercase block">HERNANDO REGION CONTRACT BALLPARK</span>
-                  <h3 class="text-lg font-display font-black text-white uppercase tracking-tight mt-1">Estimate Breakdown</h3>
-                </div>
-
-                <div class="space-y-3 text-xs font-mono font-bold">
-                  <div class="flex justify-between text-slate-400">
-                    <span>Structural Materials</span>
-                    <span id="calc-cost-materials">$2,800</span>
-                  </div>
-                  <div class="flex justify-between text-slate-400">
-                    <span>Labor & Operator Crew</span>
-                    <span id="calc-cost-labor">$4,500</span>
-                  </div>
-                  <div class="flex justify-between text-slate-400">
-                    <span>Heavy Fleet Mobilization</span>
-                    <span id="calc-cost-mobilization">$350</span>
-                  </div>
-                  <div class="h-0.5 bg-slate-800 my-2"></div>
-                  <div class="flex justify-between text-base font-display font-black text-white">
-                    <span>ESTIMATED RUN TOTAL</span>
-                    <span id="calc-cost-total" class="text-orange-500">$7,650</span>
-                  </div>
-                </div>
-
-                <div class="p-3.5 bg-slate-900 border-l-2 border-orange-600 text-[10px] leading-relaxed text-slate-400 font-medium">
-                  Includes full safety trench setups, operator shifts, and grade leveling validations. Final proposals will be verified during an engineered site walk.
-                </div>
-              </div>
-
-              <button id="lock-in-estimate-btn" class="w-full mt-6 bg-orange-600 hover:bg-orange-700 text-white font-display font-black text-xs tracking-widest uppercase py-4 rounded-none transition-transform active:scale-98 flex items-center justify-center space-x-2 shadow-xl">
-                <span>LOCK IN & BOOK PROPOSAL</span>
-                <svg class="h-4 w-4 stroke-[3]" viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              <button class="btn-slate-outline" onclick="scrollToSection('work')">
+                <span>EXPLORE PROJECTS</span>
               </button>
             </div>
 
+            <!-- Trust Badges List -->
+            <div class="hero-trust-badges" id="hero-trust-badges">
+              <div class="trust-badge-item">
+                <i data-lucide="shield-check"></i>
+                <div>
+                  <h4 class="trust-badge-title">Licensed & Insured</h4>
+                  <p class="trust-badge-sub">State of Florida</p>
+                </div>
+              </div>
+              <div class="trust-badge-item">
+                <i data-lucide="award"></i>
+                <div>
+                  <h4 class="trust-badge-title">Community Pillar</h4>
+                  <p class="trust-badge-sub">Brooksville Proud</p>
+                </div>
+              </div>
+              <div class="trust-badge-item">
+                <i data-lucide="hard-hat"></i>
+                <div>
+                  <h4 class="trust-badge-title">Heavy Machinery</h4>
+                  <p class="trust-badge-sub">Full Fleet Available</p>
+                </div>
+              </div>
+            </div>
           </div>
+
+          <!-- Hero Side Box containing credentials -->
+          <div class="hero-sidebox-col" id="hero-sidebox">
+            <div class="sidebox-card">
+              <h3 class="sidebox-title">Why Brooksville Contracts LA</h3>
+              <div class="sidebox-list">
+                <div class="sidebox-item">
+                  <span class="sidebox-step">01 / GEOGRAPHY</span>
+                  <p class="sidebox-desc">Deep familiarity with Hernando County geological conditions and code compliance.</p>
+                </div>
+                <div class="sidebox-item">
+                  <span class="sidebox-step">02 / INTEGRITY</span>
+                  <p class="sidebox-desc">Veteran operators committed to finishing on budget with no hidden fees.</p>
+                </div>
+                <div class="sidebox-item">
+                  <span class="sidebox-step">03 / PERFORMANCE</span>
+                  <p class="sidebox-desc">State-of-the-art pipe lasers, grade controls, and modern excavating machinery.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
-      </section>
+      </div>
 
-      <!-- 5. Portfolio Section -->
-      <section id="work" class="py-20 sm:py-28 bg-slate-950 text-white relative border-b border-slate-900">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <!-- Accent border -->
+      <div class="hero-bottom-accent"></div>
+    </section>
+
+    <!-- 2. ABOUT US SECTION -->
+    <section id="about" class="section-py-light">
+      <div class="container">
+        <div class="about-grid">
           
-          <div class="text-center space-y-4 mb-14 max-w-3xl mx-auto">
-            <span class="text-xs font-mono text-orange-500 font-black tracking-widest block uppercase">RECENT JOBSITES</span>
-            <h2 class="text-4xl sm:text-5xl font-display font-black tracking-tighter uppercase">Our Work Speaks for Itself</h2>
-            <div class="h-1.5 w-20 bg-orange-600 mx-auto"></div>
-            <p class="text-sm text-slate-300 font-medium">
-              Take a look at how we shape Hernando County’s commercial developments and municipal layouts. Use the filters below to browse our project sectors.
+          <!-- Left Column: Media assets and Stat blocks -->
+          <div class="about-visual-col" id="about-left-col">
+            <div class="about-img-container">
+              <div class="about-img-glow"></div>
+              <div class="about-img-box">
+                <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=700&q=80" alt="LA Contractors Site Ops" />
+                <div class="about-floating-badge">
+                  <i data-lucide="users"></i>
+                  <div>
+                    <h4 class="about-floating-title">Brooksville Roots</h4>
+                    <p class="about-floating-text">40+ Local Employees</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Stats Block Grid -->
+            <div class="about-stats-row">
+              <div class="about-stat-block">
+                <div class="about-stat-number">20+</div>
+                <div class="about-stat-label">Years Active</div>
+              </div>
+              <div class="about-stat-block">
+                <div class="about-stat-number">450+</div>
+                <div class="about-stat-label">Jobs Done</div>
+              </div>
+              <div class="about-stat-block">
+                <div class="about-stat-number">100%</div>
+                <div class="about-stat-label">On-Spec</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Interactive Tab Panel -->
+          <div class="about-narrative-col" id="about-right-col">
+            <span class="about-subtitle">MEET LA CONTRACTORS</span>
+            <h2 class="about-title">Our Foundation is the Brooksville Community</h2>
+            <p class="about-p">
+              We believe a contract is more than a handshake—it is a community obligation. We handle heavy site preparations, laying high-integrity storm and sanitary lines, with clear transparency and local goodwill.
             </p>
-          </div>
 
-          <!-- Portfolio Filters -->
-          <div class="flex flex-wrap justify-center gap-2 mb-10" id="portfolio-filters">
-            <button id="filter-btn-all" class="portfolio-filter-btn px-5 py-2.5 rounded-none text-xs font-black tracking-widest uppercase border-2 bg-orange-600 border-orange-600 text-white shadow-md" data-filter="All">All</button>
-            <button id="filter-btn-site-work" class="portfolio-filter-btn px-5 py-2.5 rounded-none text-xs font-black tracking-widest uppercase border-2 bg-slate-900 text-slate-400 hover:text-white border-slate-800" data-filter="Site Work">Site Work</button>
-            <button id="filter-btn-underground-pipe" class="portfolio-filter-btn px-5 py-2.5 rounded-none text-xs font-black tracking-widest uppercase border-2 bg-slate-900 text-slate-400 hover:text-white border-slate-800" data-filter="Underground Pipe">Underground Pipe</button>
-            <button id="filter-btn-material-sales" class="portfolio-filter-btn px-5 py-2.5 rounded-none text-xs font-black tracking-widest uppercase border-2 bg-slate-900 text-slate-400 hover:text-white border-slate-800" data-filter="Material Sales">Material Sales</button>
-          </div>
+            <!-- Tab Buttons switching panel states -->
+            <div class="about-tabs-nav" id="about-tabs-nav">
+              <button id="about-tab-btn-history" class="about-tab-btn active" onclick="switchAboutTab('history')">
+                <i data-lucide="trophy"></i>
+                <span>OUR STORY</span>
+              </button>
+              <button id="about-tab-btn-values" class="about-tab-btn" onclick="switchAboutTab('values')">
+                <i data-lucide="shield"></i>
+                <span>OUR WORKMANSHIP</span>
+              </button>
+              <button id="about-tab-btn-community" class="about-tab-btn" onclick="switchAboutTab('community')">
+                <i data-lucide="heart"></i>
+                <span>COMMUNITY PILLAR</span>
+              </button>
+            </div>
 
-          <!-- Portfolio Grid -->
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="portfolio-items-grid">
-            
-            <div class="portfolio-card bg-slate-900 border-2 border-slate-800 rounded-none overflow-hidden shadow-2xl flex flex-col justify-between hover:border-orange-600/60 transition-all duration-300" data-category="Site Work" id="portfolio-p1">
+            <!-- Live Panel showing content -->
+            <div class="about-tab-panel" id="about-tab-content-panel">
               <div>
-                <div class="relative h-48 overflow-hidden bg-slate-950">
-                  <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=600&q=80" alt="Brooksville Shopping Center" class="w-full h-full object-cover opacity-90 hover:scale-105 transition-transform duration-500" />
-                  <span class="absolute top-3 left-3 bg-slate-950 text-orange-500 text-[10px] font-mono font-black tracking-widest uppercase px-3 py-1.5 border border-slate-800">Site Work</span>
+                <span class="tab-panel-subtitle" id="tab-panel-subtitle">Serving Hernando County since 2004</span>
+                <h3 class="tab-panel-title" id="tab-panel-title">Roots in Brooksville, Built on Trust</h3>
+              </div>
+              <p class="tab-panel-content" id="tab-panel-content">
+                Founded as a small family operation, LA Contractors has grown to become Brooksville’s premier choice for site work and utility infrastructure. We started with a single backhoe and a promise: treat every jobsite like it’s in our own backyard. Over two decades later, we have laid hundreds of miles of underground pipe and shaped the ground for local neighborhoods, shopping centers, and parks.
+              </p>
+              <ul class="tab-panel-bullets" id="tab-panel-bullets">
+                <li class="tab-panel-bullet"><i data-lucide="check-circle-2"></i><span>Over 20 years of active local operation</span></li>
+                <li class="tab-panel-bullet"><i data-lucide="check-circle-2"></i><span>Built on client referrals and long-term contracts</span></li>
+                <li class="tab-panel-bullet"><i data-lucide="check-circle-2"></i><span>100% locally owned and operated in Florida</span></li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. SERVICES SECTION -->
+    <section id="services" class="section-py-dark">
+      <div class="container">
+        
+        <!-- Section Header -->
+        <div class="section-header">
+          <span class="section-subtitle">OUR CAPABILITIES</span>
+          <h2 class="section-title">Our Primary Programs & Services</h2>
+          <div class="section-divider"></div>
+          <p class="section-desc">
+            LA Contractors offers full-scale heavy site solutions. We own our fleet, hire local operators, and guarantee a standard of Brooksville work that stands the test of time.
+          </p>
+        </div>
+
+        <!-- Cards Grid -->
+        <div class="services-grid" id="services-cards-grid">
+          
+          <!-- Card 1: Site Dev -->
+          <div class="service-card" id="service-card-site-dev">
+            <div class="service-card-img-box">
+              <div class="service-card-img-overlay"></div>
+              <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=600&q=80" alt="Site Development" />
+              <div class="service-card-icon">
+                <i data-lucide="hard-hat"></i>
+              </div>
+            </div>
+            <div class="service-card-body">
+              <div>
+                <h3 class="service-card-title">Site Development</h3>
+                <p class="service-card-price">Estimate: <span>$5,000 - $150,000+</span></p>
+              </div>
+              <p class="service-card-desc">
+                Comprehensive clearing, excavation, and structural grading for commercial and residential foundations.
+              </p>
+              <div class="service-card-bullets">
+                <div class="service-card-bullet"><i data-lucide="check-circle-2"></i><span>Site Clearing & Grubbing</span></div>
+                <div class="service-card-bullet"><i data-lucide="check-circle-2"></i><span>Erosion Control & Silt Fencing</span></div>
+                <div class="service-card-bullet"><i data-lucide="check-circle-2"></i><span>Mass Earthwork & Rough Grading</span></div>
+              </div>
+              <div class="service-card-ctas">
+                <button class="btn-slate-outline btn-small" onclick="openServiceModal('site-dev')">DETAILS</button>
+                <button class="btn-orange btn-small" onclick="bookServiceDirect('Site Development')">BOOK NOW</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Pipe Laying -->
+          <div class="service-card" id="service-card-pipe-install">
+            <div class="service-card-img-box">
+              <div class="service-card-img-overlay"></div>
+              <img src="https://images.unsplash.com/photo-1581094288338-2314dddb7ecc?auto=format&fit=crop&w=600&q=80" alt="Pipe Installation" />
+              <div class="service-card-icon">
+                <i data-lucide="layers"></i>
+              </div>
+            </div>
+            <div class="service-card-body">
+              <div>
+                <h3 class="service-card-title">Pipe Installation</h3>
+                <p class="service-card-price">Estimate: <span>$8,000 - $200,000+</span></p>
+              </div>
+              <p class="service-card-desc">
+                High-integrity storm drainage, sewer lines, fire mains, and underground potable water mains.
+              </p>
+              <div class="service-card-bullets">
+                <div class="service-card-bullet"><i data-lucide="check-circle-2"></i><span>Stormwater RCP Installation</span></div>
+                <div class="service-card-bullet"><i data-lucide="check-circle-2"></i><span>Gravity Sanitary Sewers</span></div>
+                <div class="service-card-bullet"><i data-lucide="check-circle-2"></i><span>Underground Fire Service Mains</span></div>
+              </div>
+              <div class="service-card-ctas">
+                <button class="btn-slate-outline btn-small" onclick="openServiceModal('pipe-install')">DETAILS</button>
+                <button class="btn-orange btn-small" onclick="bookServiceDirect('Pipe Installation')">BOOK NOW</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: Materials Sales -->
+          <div class="service-card" id="service-card-material-sales">
+            <div class="service-card-img-box">
+              <div class="service-card-img-overlay"></div>
+              <img src="https://images.unsplash.com/photo-1578328819058-b69f3a3b0f6b?auto=format&fit=crop&w=600&q=80" alt="Material Sales" />
+              <div class="service-card-icon">
+                <i data-lucide="truck"></i>
+              </div>
+            </div>
+            <div class="service-card-body">
+              <div>
+                <h3 class="service-card-title">Material Sales</h3>
+                <p class="service-card-price">Estimate: <span>$350 - $4,500+ (load)</span></p>
+              </div>
+              <p class="service-card-desc">
+                Direct dispatch of lime rock, crushed aggregate, screened fill-dirt, washed sand, and topsoil.
+              </p>
+              <div class="service-card-bullets">
+                <div class="service-card-bullet"><i data-lucide="check-circle-2"></i><span>Florida DOT Approved Lime Rock</span></div>
+                <div class="service-card-bullet"><i data-lucide="check-circle-2"></i><span>#57 Crushed Concrete / Granite</span></div>
+                <div class="service-card-bullet"><i data-lucide="check-circle-2"></i><span>Clean Structural Fill-Dirt</span></div>
+              </div>
+              <div class="service-card-ctas">
+                <button class="btn-slate-outline btn-small" onclick="openServiceModal('material-sales')">DETAILS</button>
+                <button class="btn-orange btn-small" onclick="bookServiceDirect('Material Sales')">BOOK NOW</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICE DETAILED MODAL OVERLAY (Hidden by default) -->
+    <div id="service-details-modal" class="modal-overlay" onclick="closeModalOnOutsideClick(event)">
+      <div class="modal-container">
+        
+        <!-- Modal Banner Photo -->
+        <div class="modal-header-banner">
+          <img src="" id="modal-banner-img" alt="Service Showcase" />
+          <div class="modal-header-overlay"></div>
+          <button id="close-service-modal" class="modal-close-btn" onclick="closeServiceModal()">
+            <i data-lucide="x"></i>
+          </button>
+          <div class="modal-header-text">
+            <span class="modal-badge">PRESTIGE PROGRAM</span>
+            <h3 class="modal-title" id="modal-service-title">Site Development</h3>
+          </div>
+        </div>
+
+        <!-- Modal Scrollable Details content -->
+        <div class="modal-body">
+          <div class="modal-body-section">
+            <h4 class="modal-body-section-title">PROGRAM DESCRIPTION & CAPABILITY</h4>
+            <p class="modal-body-desc" id="modal-service-details">
+              Full details loaded here dynamically from JavaScript.
+            </p>
+          </div>
+
+          <div class="modal-details-grid">
+            <!-- Specifications -->
+            <div class="modal-body-section">
+              <h4 class="modal-body-section-title">OUR INCLUDED WORK SCOPES</h4>
+              <ul class="modal-specs-list" id="modal-specs-list">
+                <!-- dynamic spec items -->
+              </ul>
+            </div>
+
+            <!-- Pricing calculator quick info -->
+            <div class="modal-cost-box">
+              <div>
+                <span class="modal-cost-label">ESTIMATED CONTRACT RANGE</span>
+                <div class="modal-cost-price" id="modal-cost-price">$5,000 - $150,000+</div>
+                <p class="modal-cost-disclaimer">
+                  Prices are highly dependent on geological tests, permit logistics, grading area size, and pipe diameter specifications. Contact us for a free engineered site assessment.
+                </p>
+              </div>
+              <div class="modal-ctas">
+                <button class="modal-phone-call-btn" onclick="window.open('tel:8134626154')">
+                  <i data-lucide="phone-call"></i>
+                </button>
+                <button class="btn-orange" id="modal-book-now-trigger">
+                  <span>BOOK SERVICES NOW</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- 4. COST ESTIMATOR SECTION -->
+    <section id="pricing" class="section-py-grey">
+      <div class="container">
+        
+        <!-- Section Heading -->
+        <div class="section-header">
+          <span class="section-subtitle">TRANSPARENT VALUE</span>
+          <h2 class="section-title">Interactive Cost Estimator</h2>
+          <div class="section-divider"></div>
+          <p class="section-desc">
+            Get an instant budget ballpark based on standard Brooksville material rates and heavy equipment crew dispatch times. Use our selector below to build your contract scope.
+          </p>
+        </div>
+
+        <!-- Pricing Estimator Card -->
+        <div class="pricing-card">
+          
+          <!-- Left Column: Sliders and Inputs -->
+          <div class="pricing-inputs-col" id="pricing-inputs-panel">
+            
+            <!-- Service Class Selection toggles -->
+            <div>
+              <span class="pricing-label">Select Service Classification</span>
+              <div class="pricing-toggle-group">
+                <button id="pricing-select-site" class="pricing-toggle-btn active" onclick="setEstimatorService('site')">Site Dev</button>
+                <button id="pricing-select-pipe" class="pricing-toggle-btn" onclick="setEstimatorService('pipe')">Pipe Laying</button>
+                <button id="pricing-select-materials" class="pricing-toggle-btn" onclick="setEstimatorService('materials')">Materials</button>
+              </div>
+            </div>
+
+            <!-- Dynamic Input Areas based on Service selected -->
+            <div class="pricing-dynamic-inputs" id="pricing-dynamic-inputs">
+              
+              <!-- Site Dev Slider Group -->
+              <div id="slider-group-site" class="pricing-slider-block">
+                <div class="slider-header">
+                  <span class="slider-title">Project Land Scale (Acreage)</span>
+                  <span class="slider-val-badge" id="badge-site-acres">1 Acre</span>
                 </div>
-                <div class="p-5 space-y-2">
-                  <h3 class="text-base font-display font-black uppercase tracking-tight text-white">Brooksville Shopping Center Base</h3>
-                  <p class="text-xs text-slate-400 font-semibold leading-relaxed">Mass earth excavation, structural stabilization, and base preparation for a 12,000 sq ft retail pad.</p>
+                <input id="pricing-acreage-slider" type="range" min="1" max="15" step="0.5" value="1" class="pricing-slider" oninput="calculateEstimate()" />
+                <div class="slider-limits">
+                  <span>1 Acre (Lot Clearing)</span>
+                  <span>15 Acres (Subdivision Base)</span>
+                </div>
+                <p class="slider-description">
+                  Includes initial structural clearing, topsoil stripping, building pads compaction, and drainage grading.
+                </p>
+              </div>
+
+              <!-- Pipe Laying Slider Group (Hidden by default) -->
+              <div id="slider-group-pipe" class="pricing-slider-block" style="display: none;">
+                <div class="slider-header">
+                  <span class="slider-title">Total Length of Underground Pipe</span>
+                  <span class="slider-val-badge" id="badge-pipe-feet">100 Linear Feet</span>
+                </div>
+                <input id="pricing-feet-slider" type="range" min="20" max="1000" step="10" value="100" class="pricing-slider" oninput="calculateEstimate()" />
+                <div class="slider-limits">
+                  <span>20 Feet (Short Utility Link)</span>
+                  <span>1,000 Feet (Commercial Loop)</span>
+                </div>
+                <p class="slider-description">
+                  Covers trench digging, pipe bedding placement, laying gravity sanitary or stormwater lines, backfilling, and compaction testing.
+                </p>
+              </div>
+
+              <!-- Materials Selector and Slider Group (Hidden by default) -->
+              <div id="slider-group-materials" class="pricing-slider-block" style="display: none;">
+                
+                <!-- Material Type Select list -->
+                <span class="pricing-label">Florida Structural Material Type</span>
+                <div class="pricing-materials-grid">
+                  <button id="pricing-material-limerock" class="pricing-material-btn active" onclick="setEstimatorMaterial('limerock')">
+                    <span class="pricing-material-name">DOT Lime Rock</span>
+                    <span class="pricing-material-cost">$380</span>
+                  </button>
+                  <button id="pricing-material-crushed" class="pricing-material-btn" onclick="setEstimatorMaterial('crushed')">
+                    <span class="pricing-material-name">#57 Crushed Concrete</span>
+                    <span class="pricing-material-cost">$450</span>
+                  </button>
+                  <button id="pricing-material-filldirt" class="pricing-material-btn" onclick="setEstimatorMaterial('filldirt')">
+                    <span class="pricing-material-name">Structural Fill-Dirt</span>
+                    <span class="pricing-material-cost">$280</span>
+                  </button>
+                  <button id="pricing-material-topsoil" class="pricing-material-btn" onclick="setEstimatorMaterial('topsoil')">
+                    <span class="pricing-material-name">Gardening Topsoil</span>
+                    <span class="pricing-material-cost">$350</span>
+                  </button>
+                </div>
+
+                <!-- Truckloads Volume slider -->
+                <div class="slider-header">
+                  <span class="slider-title">Truckload Deliveries (Tandem Load)</span>
+                  <span class="slider-val-badge" id="badge-materials-loads">5 Loads</span>
+                </div>
+                <input id="pricing-loads-slider" type="range" min="1" max="30" step="1" value="5" class="pricing-slider" oninput="calculateEstimate()" />
+                <div class="slider-limits">
+                  <span>1 Load (~15-18 Tons)</span>
+                  <span>30 Loads (Commercial Subbase)</span>
                 </div>
               </div>
-              <div class="px-5 pb-5 pt-3 border-t border-slate-800 text-[10px] font-mono font-bold text-slate-400 flex justify-between uppercase">
-                <span class="flex items-center space-x-1"><svg class="h-3 w-3 text-orange-500" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"/><circle cx="12" cy="10" r="3"/></svg><span>Brooksville, FL</span></span>
+
+            </div>
+
+            <!-- Disclaimer footnote -->
+            <div class="pricing-info-block">
+              <i data-lucide="info"></i>
+              <div>
+                <h4 class="pricing-info-title">Brooksville Guarantee:</h4>
+                <p class="pricing-info-desc">
+                  All estimates include transport, mobilization, state-certified operators, and safety inspections. Final binding contracts are subject to geotechnical surveys and county permit pricing.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Itemized Ballpark calculation -->
+          <div class="pricing-outputs-col" id="pricing-results-panel">
+            <div class="pricing-out-header">
+              <span class="pricing-out-subtitle">CALCULATED BALLPARK</span>
+              <h3 class="pricing-out-title">Scope Estimate Details</h3>
+              
+              <!-- Itemized breakdown list -->
+              <div class="pricing-breakdown-list">
+                <div class="pricing-breakdown-item">
+                  <span class="label">Florida Aggregate & Pipes</span>
+                  <span class="val" id="breakdown-materials">$2,800</span>
+                </div>
+                <div class="pricing-breakdown-item">
+                  <span class="label">Operators, Fuel & Rig Ops</span>
+                  <span class="val" id="breakdown-labor">$4,500</span>
+                </div>
+                <div class="pricing-breakdown-item">
+                  <span class="label">Mobilization (Hub Yard)</span>
+                  <span class="val" id="breakdown-mobilization">$350</span>
+                </div>
+                <div class="pricing-breakdown-total">
+                  <span class="uppercase">Estimated Total</span>
+                  <span class="val-big" id="breakdown-total">$7,650</span>
+                </div>
+              </div>
+
+              <!-- Extra checkboxes inclusion -->
+              <div class="pricing-checks">
+                <div class="pricing-check-item">
+                  <i data-lucide="check"></i>
+                  <span>Licensed Hernando County signoff</span>
+                </div>
+                <div class="pricing-check-item">
+                  <i data-lucide="check"></i>
+                  <span>Full utility locating service (811)</span>
+                </div>
+                <div class="pricing-check-item">
+                  <i data-lucide="check"></i>
+                  <span>On-schedule mobilization guarantee</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Estimator Action Buttons -->
+            <div class="pricing-cta-container">
+              <button class="btn-orange" onclick="lockInEstimate()">
+                <i data-lucide="calculator"></i>
+                <span>LOCK IN & BOOK CONTRACT</span>
+              </button>
+              <p class="pricing-cta-sub">
+                NO DEPOSIT REQUIRED. LOCKING COPIES DETAILS TO THE BOOKING FORM.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. PORTFOLIO & TESTIMONIALS SECTION -->
+    <section id="work" class="section-py-dark">
+      <div class="container">
+        
+        <!-- Heading -->
+        <div class="section-header">
+          <span class="section-subtitle">RECENT JOBSITES</span>
+          <h2 class="section-title">Our Work Speaks for Itself</h2>
+          <div class="section-divider"></div>
+          <p class="section-desc">
+            Take a look at how we shape Hernando County’s commercial developments and municipal layouts. Use the filters below to browse our project sectors.
+          </p>
+        </div>
+
+        <!-- Filter Buttons -->
+        <div class="portfolio-filters" id="portfolio-filters">
+          <button id="filter-btn-all" class="portfolio-filter-btn active" onclick="filterPortfolio('All')">All</button>
+          <button id="filter-btn-site-work" class="portfolio-filter-btn" onclick="filterPortfolio('Site Work')">Site Work</button>
+          <button id="filter-btn-underground-pipe" class="portfolio-filter-btn" onclick="filterPortfolio('Underground Pipe')">Underground Pipe</button>
+          <button id="filter-btn-material-sales" class="portfolio-filter-btn" onclick="filterPortfolio('Material Sales')">Material Sales</button>
+        </div>
+
+        <!-- Cards grid list -->
+        <div class="portfolio-grid" id="portfolio-items-grid">
+          
+          <!-- Item 1: Site Work -->
+          <div class="portfolio-card" data-category="Site Work" id="portfolio-item-p1">
+            <div>
+              <div class="portfolio-card-img-box">
+                <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=600&q=80" alt="Brooksville Shopping Center Base" />
+                <span class="portfolio-card-badge">Site Work</span>
+              </div>
+              <div class="portfolio-card-body">
+                <h4 class="portfolio-card-title">Brooksville Shopping Center Base</h4>
+                <p class="portfolio-card-desc">
+                  Mass earth excavation, structural stabilization, and base preparation for a 12,000 sq ft retail pad.
+                </p>
+              </div>
+            </div>
+            <div class="portfolio-card-footer">
+              <div class="portfolio-footer-item">
+                <i data-lucide="map-pin"></i>
+                <span>South Broad St, Brooksville</span>
+              </div>
+              <div class="portfolio-footer-item">
+                <i data-lucide="calendar"></i>
                 <span>March 2026</span>
               </div>
             </div>
+          </div>
 
-            <div class="portfolio-card bg-slate-900 border-2 border-slate-800 rounded-none overflow-hidden shadow-2xl flex flex-col justify-between hover:border-orange-600/60 transition-all duration-300" data-category="Underground Pipe" id="portfolio-p2">
-              <div>
-                <div class="relative h-48 overflow-hidden bg-slate-950">
-                  <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=600&q=80" alt="Oak Hills Storm Drainage" class="w-full h-full object-cover opacity-90 hover:scale-105 transition-transform duration-500" />
-                  <span class="absolute top-3 left-3 bg-slate-950 text-orange-500 text-[10px] font-mono font-black tracking-widest uppercase px-3 py-1.5 border border-slate-800">Underground Pipe</span>
-                </div>
-                <div class="p-5 space-y-2">
-                  <h3 class="text-base font-display font-black uppercase tracking-tight text-white">Oak Hills Storm Drainage Install</h3>
-                  <p class="text-xs text-slate-400 font-semibold leading-relaxed">Laying 1,800 linear feet of 36-inch Reinforced Concrete Piping (RCP) to mitigate local regional flooding.</p>
-                </div>
+          <!-- Item 2: Pipe -->
+          <div class="portfolio-card" data-category="Underground Pipe" id="portfolio-item-p2">
+            <div>
+              <div class="portfolio-card-img-box">
+                <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=600&q=80" alt="Oak Hills Storm Drainage Install" />
+                <span class="portfolio-card-badge">Underground Pipe</span>
               </div>
-              <div class="px-5 pb-5 pt-3 border-t border-slate-800 text-[10px] font-mono font-bold text-slate-400 flex justify-between uppercase">
-                <span class="flex items-center space-x-1"><svg class="h-3 w-3 text-orange-500" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"/><circle cx="12" cy="10" r="3"/></svg><span>Oak Hills, FL</span></span>
+              <div class="portfolio-card-body">
+                <h4 class="portfolio-card-title">Oak Hills Storm Drainage Install</h4>
+                <p class="portfolio-card-desc">
+                  Laying 1,800 linear feet of 36-inch Reinforced Concrete Piping (RCP) to mitigate local regional flooding.
+                </p>
+              </div>
+            </div>
+            <div class="portfolio-card-footer">
+              <div class="portfolio-footer-item">
+                <i data-lucide="map-pin"></i>
+                <span>Oak Hills Subdivision, FL</span>
+              </div>
+              <div class="portfolio-footer-item">
+                <i data-lucide="calendar"></i>
                 <span>January 2026</span>
               </div>
             </div>
+          </div>
 
-            <div class="portfolio-card bg-slate-900 border-2 border-slate-800 rounded-none overflow-hidden shadow-2xl flex flex-col justify-between hover:border-orange-600/60 transition-all duration-300" data-category="Site Work" id="portfolio-p3">
-              <div>
-                <div class="relative h-48 overflow-hidden bg-slate-950">
-                  <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=600&q=80" alt="Hernando County Park" class="w-full h-full object-cover opacity-90 hover:scale-105 transition-transform duration-500" />
-                  <span class="absolute top-3 left-3 bg-slate-950 text-orange-500 text-[10px] font-mono font-black tracking-widest uppercase px-3 py-1.5 border border-slate-800">Site Work</span>
-                </div>
-                <div class="p-5 space-y-2">
-                  <h3 class="text-base font-display font-black uppercase tracking-tight text-white">Hernando County Park Civil Prep</h3>
-                  <p class="text-xs text-slate-400 font-semibold leading-relaxed">Topsoil stripping, retention pond excavation, and structural grade work for new public park layouts.</p>
-                </div>
+          <!-- Item 3: Site Work -->
+          <div class="portfolio-card" data-category="Site Work" id="portfolio-item-p3">
+            <div>
+              <div class="portfolio-card-img-box">
+                <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=600&q=80" alt="Hernando County Park Civil Prep" />
+                <span class="portfolio-card-badge">Site Work</span>
               </div>
-              <div class="px-5 pb-5 pt-3 border-t border-slate-800 text-[10px] font-mono font-bold text-slate-400 flex justify-between uppercase">
-                <span class="flex items-center space-x-1"><svg class="h-3 w-3 text-orange-500" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"/><circle cx="12" cy="10" r="3"/></svg><span>Brooksville, FL</span></span>
+              <div class="portfolio-card-body">
+                <h4 class="portfolio-card-title">Hernando County Park Civil Prep</h4>
+                <p class="portfolio-card-desc">
+                  Topsoil stripping, retention pond excavation, and structural grade work for new public park layouts.
+                </p>
+              </div>
+            </div>
+            <div class="portfolio-card-footer">
+              <div class="portfolio-footer-item">
+                <i data-lucide="map-pin"></i>
+                <span>State Road 50, Brooksville</span>
+              </div>
+              <div class="portfolio-footer-item">
+                <i data-lucide="calendar"></i>
                 <span>November 2025</span>
               </div>
             </div>
+          </div>
 
-            <div class="portfolio-card bg-slate-900 border-2 border-slate-800 rounded-none overflow-hidden shadow-2xl flex flex-col justify-between hover:border-orange-600/60 transition-all duration-300" data-category="Underground Pipe" id="portfolio-p4">
-              <div>
-                <div class="relative h-48 overflow-hidden bg-slate-950">
-                  <img src="https://images.unsplash.com/photo-1581094288338-2314dddb7ecc?auto=format&fit=crop&w=600&q=80" alt="Sewer Bypass" class="w-full h-full object-cover opacity-90 hover:scale-105 transition-transform duration-500" />
-                  <span class="absolute top-3 left-3 bg-slate-950 text-orange-500 text-[10px] font-mono font-black tracking-widest uppercase px-3 py-1.5 border border-slate-800">Underground Pipe</span>
-                </div>
-                <div class="p-5 space-y-2">
-                  <h3 class="text-base font-display font-black uppercase tracking-tight text-white">Sewer Bypass & Sanitary Tie-In</h3>
-                  <p class="text-xs text-slate-400 font-semibold leading-relaxed">Meticulous deep-trench sanitary pipe connections and compliance flow test sign-offs under live highway route.</p>
-                </div>
+          <!-- Item 4: Pipe -->
+          <div class="portfolio-card" data-category="Underground Pipe" id="portfolio-item-p4">
+            <div>
+              <div class="portfolio-card-img-box">
+                <img src="https://images.unsplash.com/photo-1581094288338-2314dddb7ecc?auto=format&fit=crop&w=600&q=80" alt="Sewer Bypass & Sanitary Tie-In" />
+                <span class="portfolio-card-badge">Underground Pipe</span>
               </div>
-              <div class="px-5 pb-5 pt-3 border-t border-slate-800 text-[10px] font-mono font-bold text-slate-400 flex justify-between uppercase">
-                <span class="flex items-center space-x-1"><svg class="h-3 w-3 text-orange-500" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"/><circle cx="12" cy="10" r="3"/></svg><span>US-98, Brooksville</span></span>
+              <div class="portfolio-card-body">
+                <h4 class="portfolio-card-title">Sewer Bypass & Sanitary Tie-In</h4>
+                <p class="portfolio-card-desc">
+                  Meticulous deep-trench sanitary pipe connections and compliance flow test sign-offs under live highway route.
+                </p>
+              </div>
+            </div>
+            <div class="portfolio-card-footer">
+              <div class="portfolio-footer-item">
+                <i data-lucide="map-pin"></i>
+                <span>US-98 Bypass, Brooksville</span>
+              </div>
+              <div class="portfolio-footer-item">
+                <i data-lucide="calendar"></i>
                 <span>September 2025</span>
               </div>
             </div>
+          </div>
 
-            <div class="portfolio-card bg-slate-900 border-2 border-slate-800 rounded-none overflow-hidden shadow-2xl flex flex-col justify-between hover:border-orange-600/60 transition-all duration-300" data-category="Material Sales" id="portfolio-p5">
-              <div>
-                <div class="relative h-48 overflow-hidden bg-slate-950">
-                  <img src="https://images.unsplash.com/photo-1578328819058-b69f3a3b0f6b?auto=format&fit=crop&w=600&q=80" alt="Lime Rock Delivery" class="w-full h-full object-cover opacity-90 hover:scale-105 transition-transform duration-500" />
-                  <span class="absolute top-3 left-3 bg-slate-950 text-orange-500 text-[10px] font-mono font-black tracking-widest uppercase px-3 py-1.5 border border-slate-800">Material Sales</span>
-                </div>
-                <div class="p-5 space-y-2">
-                  <h3 class="text-base font-display font-black uppercase tracking-tight text-white">Lime Rock Delivery Subgrade</h3>
-                  <p class="text-xs text-slate-400 font-semibold leading-relaxed">Fast dispatch and tailgate spread of 120 loads of DOT approved aggregate for parking subbase grading.</p>
-                </div>
+          <!-- Item 5: Materials -->
+          <div class="portfolio-card" data-category="Material Sales" id="portfolio-item-p5">
+            <div>
+              <div class="portfolio-card-img-box">
+                <img src="https://images.unsplash.com/photo-1578328819058-b69f3a3b0f6b?auto=format&fit=crop&w=600&q=80" alt="Lime Rock Delivery Subgrade" />
+                <span class="portfolio-card-badge">Material Sales</span>
               </div>
-              <div class="px-5 pb-5 pt-3 border-t border-slate-800 text-[10px] font-mono font-bold text-slate-400 flex justify-between uppercase">
-                <span class="flex items-center space-x-1"><svg class="h-3 w-3 text-orange-500" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"/><circle cx="12" cy="10" r="3"/></svg><span>Cobb Road Yard, FL</span></span>
+              <div class="portfolio-card-body">
+                <h4 class="portfolio-card-title">Lime Rock Delivery Subgrade</h4>
+                <p class="portfolio-card-desc">
+                  Fast dispatch and tailgate spread of 120 loads of DOT approved aggregate for parking subbase grading.
+                </p>
+              </div>
+            </div>
+            <div class="portfolio-card-footer">
+              <div class="portfolio-footer-item">
+                <i data-lucide="map-pin"></i>
+                <span>Cobb Road Warehouse, FL</span>
+              </div>
+              <div class="portfolio-footer-item">
+                <i data-lucide="calendar"></i>
                 <span>June 2025</span>
               </div>
             </div>
-
           </div>
 
-          <!-- Testimonials Slider Section -->
-          <div class="mt-24 max-w-4xl mx-auto border-t-2 border-slate-900 pt-16" id="testimonials-section">
-            <div class="text-center mb-10">
-              <span class="text-[10px] font-mono text-orange-500 font-black tracking-widest uppercase block">LOCAL PARTNER REVIEWS</span>
-              <h3 class="text-2xl font-display font-black uppercase tracking-tight text-white mt-1">Sustained Local Goodwill</h3>
+        </div>
+
+        <!-- Testimonial Slider Row (Bento Style) -->
+        <div class="testimonials-divider" id="testimonials-block">
+          <div class="testimonials-grid">
+            
+            <!-- Left Narrative -->
+            <div class="testimonials-intro" id="testimonials-left">
+              <span class="testimonials-intro-subtitle">COMMUNITY VOICE</span>
+              <h3 class="testimonials-intro-title">What the Locals Say About LA Contractors</h3>
+              <p class="testimonials-intro-desc">
+                As a pillar company, we value our reputation on every Brooksville job site. Our work speaks through the developers, municipal crew members, and neighbors we support.
+              </p>
+              <div class="testimonials-intro-badge">
+                <i data-lucide="shield-check"></i>
+                <span class="testimonials-intro-badge-text">Licensed State Utility Contractor</span>
+              </div>
             </div>
 
-            <!-- Testimonial Slider Wrapper -->
-            <div class="bg-slate-900 border-2 border-slate-800 p-8 rounded-none relative overflow-hidden shadow-2xl min-h-[250px] flex flex-col justify-between">
-              
-              <!-- Quote Content Grid -->
-              <div class="relative z-10 space-y-6">
-                <div class="flex text-orange-500 space-x-1" id="testimonial-stars">
-                  <svg class="h-4 w-4 fill-current" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                  <svg class="h-4 w-4 fill-current" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                  <svg class="h-4 w-4 fill-current" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                  <svg class="h-4 w-4 fill-current" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                  <svg class="h-4 w-4 fill-current" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <!-- Right Interactive Slider -->
+            <div class="testimonials-slider-col" id="testimonials-right">
+              <div class="testimonial-card">
+                <div class="testimonial-quote-bg">“</div>
+                
+                <!-- Stars -->
+                <div class="testimonial-stars" id="testimonial-stars">
+                  <i data-lucide="star" class="fill"></i>
+                  <i data-lucide="star" class="fill"></i>
+                  <i data-lucide="star" class="fill"></i>
+                  <i data-lucide="star" class="fill"></i>
+                  <i data-lucide="star" class="fill"></i>
                 </div>
 
-                <p id="testimonial-quote" class="text-sm sm:text-base text-slate-300 font-medium leading-relaxed italic">
+                <!-- Quote Text -->
+                <p class="testimonial-quote" id="testimonial-quote">
                   "LA Contractors is easily the most reliable site preparation crew in Hernando County. Their operator grade accuracy is unmatched. They excavated our foundation pads ahead of schedule and the civil engineers signed off with zero adjustments. A true Brooksville pillar."
                 </p>
-              </div>
 
-              <!-- Author & Navigation -->
-              <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 pt-6 border-t border-slate-800">
-                <div class="flex items-center space-x-3.5">
-                  <img id="testimonial-avatar" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=120&q=80" alt="Darrell Vance" class="h-11 w-11 rounded-full object-cover border border-orange-500" />
-                  <div>
-                    <h4 id="testimonial-name" class="text-xs font-black uppercase tracking-wider text-white">Darrell Vance</h4>
-                    <p id="testimonial-role" class="text-[10px] text-slate-400 font-mono font-bold uppercase tracking-widest mt-0.5">Project Manager • Vance Commercial Properties</p>
+                <!-- Profile details & Carousel indicators -->
+                <div class="testimonial-user">
+                  <div class="testimonial-user-info">
+                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=120&q=80" alt="Darrell Vance" class="testimonial-avatar" id="testimonial-avatar" />
+                    <div>
+                      <h4 class="testimonial-name" id="testimonial-name">Darrell Vance</h4>
+                      <p class="testimonial-role" id="testimonial-role">
+                        Project Manager, <span>Vance Commercial Properties</span>
+                      </p>
+                    </div>
+                  </div>
+
+                  <!-- Dot switcher indicator -->
+                  <div class="testimonial-dots">
+                    <button class="testimonial-dot active" id="testimonial-dot-0" onclick="setTestimonial(0)" aria-label="Slide 1"></button>
+                    <button class="testimonial-dot" id="testimonial-dot-1" onclick="setTestimonial(1)" aria-label="Slide 2"></button>
+                    <button class="testimonial-dot" id="testimonial-dot-2" onclick="setTestimonial(2)" aria-label="Slide 3"></button>
                   </div>
                 </div>
 
-                <!-- Slider Controls -->
-                <div class="flex items-center space-x-3 self-end sm:self-auto">
-                  <button id="testimonial-prev-btn" class="p-2 border-2 border-slate-800 hover:border-orange-500 hover:text-orange-500 text-slate-400 bg-slate-950 transition-all rounded-none" aria-label="Previous Testimonial">
-                    <svg class="h-4 w-4 stroke-[2.5]" viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
-                  </button>
-                  <div class="flex space-x-1.5" id="testimonial-dots">
-                    <button class="h-2 w-2 rounded-full bg-orange-600 testimonial-dot" data-idx="0" aria-label="Slide 1"></button>
-                    <button class="h-2 w-2 rounded-full bg-slate-800 hover:bg-slate-700 testimonial-dot" data-idx="1" aria-label="Slide 2"></button>
-                    <button class="h-2 w-2 rounded-full bg-slate-800 hover:bg-slate-700 testimonial-dot" data-idx="2" aria-label="Slide 3"></button>
-                  </div>
-                  <button id="testimonial-next-btn" class="p-2 border-2 border-slate-800 hover:border-orange-500 hover:text-orange-500 text-slate-400 bg-slate-950 transition-all rounded-none" aria-label="Next Testimonial">
-                    <svg class="h-4 w-4 stroke-[2.5]" viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-                  </button>
-                </div>
-              </div>
-
-            </div>
-          </div>
-
-        </div>
-      </section>
-
-      <!-- 6. Contact Section -->
-      <section id="contact" class="py-20 sm:py-28 bg-white border-b border-slate-200 text-slate-900 relative">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          
-          <div class="text-center space-y-4 mb-16 max-w-3xl mx-auto">
-            <span class="text-xs font-mono text-orange-600 font-black tracking-widest block uppercase">GET ON THE SCHEDULE</span>
-            <h2 class="text-4xl sm:text-5xl font-display font-black tracking-tighter text-slate-950 uppercase">Book LA Contractors Today</h2>
-            <div class="h-1.5 w-20 bg-orange-600 mx-auto"></div>
-            <p class="text-sm sm:text-base text-slate-700 font-medium">
-              Let us know what your project needs. Fill out the booking request below to schedule a direct site walk or aggregate material dispatch.
-            </p>
-          </div>
-
-          <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 max-w-6xl mx-auto">
-            
-            <!-- Left Info Cards -->
-            <div class="lg:col-span-5 space-y-8" id="contact-info-panel">
-              <div class="space-y-4">
-                <h3 class="text-2xl font-display font-black text-slate-950 uppercase tracking-tight">Brooksville Yard Hub</h3>
-                <p class="text-sm text-slate-600 leading-relaxed font-medium">
-                  Our heavy fleet yard is centrally stationed in Hernando County, allowing rapid dispatch to sites across Citrus, Pasco, and Sumter counties.
-                </p>
-              </div>
-
-              <div class="space-y-4">
-                <div class="flex items-start space-x-4 bg-slate-50 p-4 border-2 border-slate-200 rounded-none">
-                  <svg class="h-6 w-6 text-orange-600 flex-shrink-0 mt-0.5 stroke-[2.5]" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                  <div>
-                    <h4 class="text-[10px] font-mono font-black text-slate-500 uppercase tracking-widest">Yard Location</h4>
-                    <p class="text-xs text-slate-950 mt-1 font-bold">104 Cobb Road, Brooksville, FL 34601</p>
-                  </div>
-                </div>
-
-                <div class="flex items-start space-x-4 bg-slate-50 p-4 border-2 border-slate-200 rounded-none">
-                  <svg class="h-6 w-6 text-orange-600 flex-shrink-0 mt-0.5 stroke-[2.5]" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                  <div>
-                    <h4 class="text-[10px] font-mono font-black text-slate-500 uppercase tracking-widest">Direct Estimates Line</h4>
-                    <a href="tel:8134626154" class="text-sm text-slate-950 hover:text-orange-600 block mt-1 font-black transition-colors">(813) 462-6154</a>
-                  </div>
-                </div>
-
-                <div class="flex items-start space-x-4 bg-slate-50 p-4 border-2 border-slate-200 rounded-none">
-                  <svg class="h-6 w-6 text-orange-600 flex-shrink-0 mt-0.5 stroke-[2.5]" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                  <div>
-                    <h4 class="text-[10px] font-mono font-black text-slate-500 uppercase tracking-widest">Commercial Dispatch Email</h4>
-                    <a href="mailto:contract@lacontractors.com" class="text-sm text-slate-950 hover:text-orange-600 block mt-1 font-black transition-colors">contract@lacontractors.com</a>
-                  </div>
-                </div>
-
-                <div class="flex items-start space-x-4 bg-slate-50 p-4 border-2 border-slate-200 rounded-none">
-                  <svg class="h-6 w-6 text-orange-600 flex-shrink-0 mt-0.5 stroke-[2.5]" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                  <div>
-                    <h4 class="text-[10px] font-mono font-black text-slate-500 uppercase tracking-widest">Operating Hours</h4>
-                    <p class="text-xs text-slate-950 mt-1 font-bold">Mon - Fri: 7:00 AM - 5:00 PM</p>
-                    <p class="text-xs text-slate-600 font-bold">Saturday: 8:00 AM - 1:00 PM</p>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Trust Safeguards -->
-              <div class="bg-slate-950 border-2 border-slate-900 p-5 rounded-none space-y-3 text-white">
-                <div class="flex items-center space-x-2">
-                  <svg class="h-5 w-5 text-orange-500 stroke-[2.5]" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                  <span class="text-[10px] font-mono font-black tracking-widest text-white uppercase">Contracting Safeguards</span>
-                </div>
-                <p class="text-xs text-slate-300 leading-relaxed font-medium">
-                  LA Contractors holds complete State of Florida utility licenses, general commercial liability insurance, and worker compensation coverages to guarantee absolute job site safety.
-                </p>
               </div>
             </div>
 
-            <!-- Right Dynamic Form -->
-            <div class="lg:col-span-7 bg-white border-2 border-slate-900 p-6 sm:p-10 rounded-none shadow-2xl" id="contact-form-panel">
-              
-              <!-- Booking Form -->
-              <form id="booking-form" class="space-y-5">
-                <div class="border-b border-slate-100 pb-3 flex justify-between items-center">
-                  <div>
-                    <h3 class="text-lg font-display font-black text-slate-950 uppercase tracking-tight">Booking Proposal Form</h3>
-                    <p class="text-xs text-slate-500 mt-1 font-semibold">Enter your details to receive a formal contract proposal.</p>
-                  </div>
-                  <span id="estimate-loaded-badge" class="bg-orange-600 border-2 border-orange-600 text-white text-[10px] font-mono px-3 py-1 rounded-none uppercase tracking-widest font-black hidden animate-pulse">Estimate Loaded</span>
-                </div>
-
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div class="space-y-1.5">
-                    <label for="name-input" class="text-xs font-mono font-black text-slate-700 uppercase tracking-widest">Full Name *</label>
-                    <input id="name-input" type="text" name="name" required placeholder="John Doe" class="w-full bg-slate-50 border-2 border-slate-200 focus:border-slate-950 focus:bg-white rounded-none px-4 py-3 text-sm text-slate-950 font-medium transition-all outline-none" />
-                  </div>
-                  <div class="space-y-1.5">
-                    <label for="email-input" class="text-xs font-mono font-black text-slate-700 uppercase tracking-widest">Email Address *</label>
-                    <input id="email-input" type="email" name="email" required placeholder="john@company.com" class="w-full bg-slate-50 border-2 border-slate-200 focus:border-slate-950 focus:bg-white rounded-none px-4 py-3 text-sm text-slate-950 font-medium transition-all outline-none" />
-                  </div>
-                </div>
-
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div class="space-y-1.5">
-                    <label for="phone-input" class="text-xs font-mono font-black text-slate-700 uppercase tracking-widest">Phone Number *</label>
-                    <input id="phone-input" type="tel" name="phone" required placeholder="(813) 462-6154" class="w-full bg-slate-50 border-2 border-slate-200 focus:border-slate-950 focus:bg-white rounded-none px-4 py-3 text-sm text-slate-950 font-medium transition-all outline-none" />
-                  </div>
-                  <div class="space-y-1.5">
-                    <label for="company-input" class="text-xs font-mono font-black text-slate-700 uppercase tracking-widest">Company Name (Optional)</label>
-                    <input id="company-input" type="text" name="company" placeholder="Mitchell Developments" class="w-full bg-slate-50 border-2 border-slate-200 focus:border-slate-950 focus:bg-white rounded-none px-4 py-3 text-sm text-slate-950 font-medium transition-all outline-none" />
-                  </div>
-                </div>
-
-                <div class="space-y-1.5">
-                  <label for="address-input" class="text-xs font-mono font-black text-slate-700 uppercase tracking-widest">Site / Delivery Address *</label>
-                  <input id="address-input" type="text" name="address" required placeholder="Street, City, FL (e.g., Cobb Road, Brooksville)" class="w-full bg-slate-50 border-2 border-slate-200 focus:border-slate-950 focus:bg-white rounded-none px-4 py-3 text-sm text-slate-950 font-medium transition-all outline-none" />
-                </div>
-
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div class="space-y-1.5">
-                    <label for="service-select" class="text-xs font-mono font-black text-slate-700 uppercase tracking-widest">Required Service Program</label>
-                    <select id="service-select" name="service" class="w-full bg-slate-50 border-2 border-slate-200 focus:border-slate-950 focus:bg-white rounded-none px-4 py-3 text-sm text-slate-950 font-medium transition-all outline-none cursor-pointer">
-                      <option value="Site Development">Site Development</option>
-                      <option value="Pipe Installation">Pipe Installation</option>
-                      <option value="Material Sales">Material Sales</option>
-                    </select>
-                  </div>
-                  <div class="space-y-1.5">
-                    <label for="scale-input" class="text-xs font-mono font-black text-slate-700 uppercase tracking-widest">Project Scope Scale</label>
-                    <input id="scale-input" type="text" name="scale" placeholder="e.g. 2 Acres, 150 LF" class="w-full bg-slate-50 border-2 border-slate-200 focus:border-slate-950 focus:bg-white rounded-none px-4 py-3 text-sm text-slate-950 font-medium transition-all outline-none" />
-                  </div>
-                </div>
-
-                <div class="space-y-1.5">
-                  <label for="notes-textarea" class="text-xs font-mono font-black text-slate-700 uppercase tracking-widest">Specific Requirements or Message</label>
-                  <textarea id="notes-textarea" name="notes" rows="4" placeholder="Please detail any soil excavation specs, utility piping scopes, or specific aggregate requests..." class="w-full bg-slate-50 border-2 border-slate-200 focus:border-slate-950 focus:bg-white rounded-none px-4 py-3 text-sm text-slate-950 font-medium transition-all outline-none"></textarea>
-                </div>
-
-                <div class="pt-3 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-                  <p class="text-[10px] text-slate-500 max-w-[280px] font-semibold leading-relaxed">
-                    By submitting, you agree to allow LA Contractors crew to review your property grading on public records.
-                  </p>
-                  <button id="submit-proposal-btn" type="submit" class="bg-orange-600 hover:bg-orange-700 text-white font-display font-black text-xs tracking-widest uppercase px-6 py-4 rounded-none shadow-2xl transition-all duration-200 flex items-center justify-center space-x-2">
-                    <span>SUBMIT REQUEST</span>
-                    <svg class="h-4 w-4 stroke-[3]" viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-                  </button>
-                </div>
-              </form>
-
-              <!-- Success Panel -->
-              <div id="contact-success-panel" class="py-12 text-center space-y-6 flex flex-col items-center hidden">
-                <div class="bg-orange-600 text-white p-4 rounded-none shadow-2xl">
-                  <svg class="h-10 w-10 stroke-[3]" viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg>
-                </div>
-
-                <div class="space-y-2 max-w-md">
-                  <span class="text-[10px] font-mono text-orange-600 font-black tracking-widest block uppercase">PROPOSAL RECEIVED SUCCESSFULLY</span>
-                  <h3 id="success-client-name" class="text-2xl font-display font-black text-slate-950 uppercase tracking-tight"></h3>
-                  <p class="text-xs text-slate-600 leading-relaxed font-semibold">
-                    We have copy-routed your contract proposal request directly to our Brooksville estimation crew. An engineer will follow up with you within 24 working hours.
-                  </p>
-                </div>
-
-                <div class="bg-slate-950 border-2 border-slate-900 p-4 rounded-none text-center text-white max-w-sm w-full space-y-2">
-                  <div class="text-[10px] font-mono text-slate-400 uppercase font-black tracking-widest">Proposal Reference ID</div>
-                  <div id="success-ticket-id" class="text-xl font-mono font-black text-orange-500 tracking-wider"></div>
-                  <div class="text-[9px] text-slate-500 font-mono font-bold uppercase tracking-widest">State of Florida Dispatch Hub • UTC Timestamped</div>
-                </div>
-
-                <button id="submit-another-proposal" class="bg-slate-900 hover:bg-slate-950 text-slate-200 hover:text-white px-5 py-2.5 rounded-none text-xs font-black tracking-widest uppercase border-2 border-slate-900 transition-all duration-200">
-                  SUBMIT ANOTHER PROPOSAL
-                </button>
-              </div>
-
-            </div>
-
           </div>
-        </div>
-      </section>
-
-    </main>
-
-    <!-- Footer -->
-    <footer id="app-footer" class="bg-slate-950 text-slate-400 pt-16 pb-12 border-t-2 border-slate-900 relative">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <div class="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b-2 border-slate-900">
-          
-          <!-- Brand -->
-          <div class="md:col-span-5 space-y-4" id="footer-brand-section">
-            <div class="flex items-center space-x-2.5">
-              <div class="bg-orange-600 text-white p-2 rounded-none font-bold">
-                <svg class="h-5 w-5 stroke-[2.5]" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M2 18a1 1 0 0 0 1 1h18a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v2z"/><path d="M10 10V5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v5"/><path d="M4 15V10a8 8 0 0 1 16 0v5"/></svg>
-              </div>
-              <span class="text-xl font-display font-black text-white tracking-tighter uppercase">LA CONTRACTORS</span>
-            </div>
-            <p class="text-xs text-slate-300 max-w-sm leading-relaxed font-semibold">
-              Brooksville’s trusted partner in complete site development, grading, excavations, and high-spec underground utilities. We build the infrastructure Florida thrives on.
-            </p>
-            <div class="flex items-center space-x-2 text-[11px] text-slate-400 font-bold uppercase tracking-wider font-mono">
-              <svg class="h-4 w-4 text-orange-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-              <span>Certified Florida Utility Contractor • Lic #CUC1224558</span>
-            </div>
-          </div>
-
-          <!-- Quick Navigation -->
-          <div class="md:col-span-3 space-y-4" id="footer-links-section">
-            <h4 class="text-xs font-mono font-black text-white uppercase tracking-widest">Quick Navigation</h4>
-            <div class="grid grid-cols-1 gap-2.5 text-xs font-bold uppercase tracking-wider">
-              <a href="#home" class="text-left text-slate-400 hover:text-orange-500 transition-colors">HOME</a>
-              <a href="#about" class="text-left text-slate-400 hover:text-orange-500 transition-colors">ABOUT</a>
-              <a href="#services" class="text-left text-slate-400 hover:text-orange-500 transition-colors">SERVICES</a>
-              <a href="#pricing" class="text-left text-slate-400 hover:text-orange-500 transition-colors">PRICING ESTIMATOR</a>
-              <a href="#work" class="text-left text-slate-400 hover:text-orange-500 transition-colors">OUR WORK</a>
-              <a href="#contact" class="text-left text-slate-400 hover:text-orange-500 transition-colors">CONTACT / BOOK NOW</a>
-            </div>
-          </div>
-
-          <!-- Contract Center -->
-          <div class="md:col-span-4 space-y-4" id="footer-contact-section">
-            <h4 class="text-xs font-mono font-black text-white uppercase tracking-widest">Contract Center</h4>
-            <ul class="space-y-3 text-xs font-bold uppercase tracking-wider">
-              <li class="flex items-center space-x-2.5">
-                <svg class="h-4 w-4 text-orange-500 flex-shrink-0 stroke-[2.5]" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                <span class="text-slate-300">104 Cobb Road, Brooksville, FL 34601</span>
-              </li>
-              <li class="flex items-center space-x-2.5">
-                <svg class="h-4 w-4 text-orange-500 flex-shrink-0 stroke-[2.5]" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                <a href="tel:8134626154" class="hover:text-orange-500 text-white">(813) 462-6154</a>
-              </li>
-              <li class="flex items-center space-x-2.5">
-                <svg class="h-4 w-4 text-orange-500 flex-shrink-0 stroke-[2.5]" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                <a href="mailto:contract@lacontractors.com" class="hover:text-orange-500 text-white lowercase">contract@lacontractors.com</a>
-              </li>
-            </ul>
-          </div>
-
-        </div>
-
-        <div class="pt-8 flex flex-col sm:flex-row justify-between items-center text-xs text-slate-500 space-y-4 sm:space-y-0 font-bold uppercase tracking-wider">
-          <div>
-            <p>© <span id="copyright-year">2026</span> LA Contractors. All rights reserved.</p>
-            <p class="text-[10px] text-slate-600 mt-1 font-mono font-black">Brooksville's premier utility and earth clearing contractors. Built locally.</p>
-          </div>
-          <button id="footer-back-to-top" class="group flex items-center space-x-2 bg-slate-900 hover:bg-slate-950 border-2 border-slate-800 text-slate-300 hover:text-white px-3.5 py-2 rounded-none transition-colors font-black tracking-widest uppercase text-[10px]" title="Scroll Back To Top">
-            <span>Back to Top</span>
-            <svg class="h-4 w-4 group-hover:-translate-y-0.5 transition-transform stroke-[2.5]" viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
-          </button>
         </div>
 
       </div>
-    </footer>
+    </section>
 
-    <script src="/script.js"></script>
-  </body>
+    <!-- 6. CONTACT & FORM BOOKING SECTION -->
+    <section id="contact" class="section-py-light">
+      <div class="container">
+        
+        <!-- Heading -->
+        <div class="section-header">
+          <span class="section-subtitle">GET ON THE SCHEDULE</span>
+          <h2 class="section-title">Book LA Contractors Today</h2>
+          <div class="section-divider"></div>
+          <p class="section-desc">
+            Let us know what your project needs. Fill out the booking request below to schedule a direct site walk or aggregate material dispatch.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          
+          <!-- Left Panel details list -->
+          <div class="contact-info-col" id="contact-info-panel">
+            <div class="contact-info-header">
+              <h3 class="contact-info-title">Brooksville Yard Hub</h3>
+              <p class="contact-info-desc">
+                Our heavy fleet yard is centrally stationed in Hernando County, allowing rapid dispatch to sites across Citrus, Pasco, and Sumter counties.
+              </p>
+            </div>
+
+            <!-- Channels cards -->
+            <div class="contact-channels">
+              <div class="contact-channel-item">
+                <i data-lucide="map-pin"></i>
+                <div>
+                  <h4 class="contact-channel-label">Headquarters Yard</h4>
+                  <p class="contact-channel-value">104 Cobb Road, Brooksville, FL 34601</p>
+                </div>
+              </div>
+              <div class="contact-channel-item">
+                <i data-lucide="phone"></i>
+                <div>
+                  <h4 class="contact-channel-label">Direct Estimates Line</h4>
+                  <a href="tel:8134626154" class="contact-channel-value font-black">(813) 462-6154</a>
+                </div>
+              </div>
+              <div class="contact-channel-item">
+                <i data-lucide="mail"></i>
+                <div>
+                  <h4 class="contact-channel-label">Bid Invitations</h4>
+                  <a href="mailto:contract@lacontractors.com" class="contact-channel-value">contract@lacontractors.com</a>
+                </div>
+              </div>
+              <div class="contact-channel-item">
+                <i data-lucide="clock"></i>
+                <div>
+                  <h4 class="contact-channel-label">Operating Hours</h4>
+                  <div class="contact-channel-hours">
+                    <span>Mon - Fri: 7:00 AM - 5:00 PM</span>
+                    <span class="sec-hours">Saturday: 8:00 AM - 1:00 PM</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Safeguards credential box -->
+            <div class="contact-trust-card">
+              <div class="contact-trust-header">
+                <i data-lucide="shield-check"></i>
+                <span class="contact-trust-badge">Contracting Safeguards</span>
+              </div>
+              <p class="contact-trust-desc">
+                LA Contractors holds complete State of Florida utility licenses, general commercial liability insurance, and worker compensation coverages to guarantee absolute job site safety.
+              </p>
+            </div>
+          </div>
+
+          <!-- Right Panel: Interactive Booking Form / Success receipt display -->
+          <div class="contact-form-col" id="contact-form-panel">
+            
+            <!-- Standard Form State -->
+            <form id="contact-proposal-form" onsubmit="handleFormSubmit(event)">
+              
+              <div class="form-header">
+                <div>
+                  <h3 class="form-header-title">Booking Proposal Form</h3>
+                  <p class="form-header-desc">Enter your details to receive a formal contract proposal.</p>
+                </div>
+                <span class="form-loaded-badge" id="form-loaded-badge">Estimate Loaded</span>
+              </div>
+
+              <!-- Names / Email dual rows -->
+              <div class="form-grid-2">
+                <div class="form-group">
+                  <label for="name-input">Full Name *</label>
+                  <input id="name-input" type="text" name="name" required placeholder="John Doe" class="form-control" />
+                </div>
+                <div class="form-group">
+                  <label for="email-input">Email Address *</label>
+                  <input id="email-input" type="email" name="email" required placeholder="john@company.com" class="form-control" />
+                </div>
+              </div>
+
+              <!-- Phone / Company dual rows -->
+              <div class="form-grid-2">
+                <div class="form-group">
+                  <label for="phone-input">Phone Number *</label>
+                  <input id="phone-input" type="tel" name="phone" required placeholder="(813) 462-6154" class="form-control" />
+                </div>
+                <div class="form-group">
+                  <label for="company-input">Company Name (Optional)</label>
+                  <input id="company-input" type="text" name="company" placeholder="Mitchell Developments" class="form-control" />
+                </div>
+              </div>
+
+              <!-- Address -->
+              <div class="form-group">
+                <label for="address-input">Site / Delivery Address *</label>
+                <input id="address-input" type="text" name="address" required placeholder="Street, City, FL (e.g., Cobb Road, Brooksville)" class="form-control" />
+              </div>
+
+              <!-- Program / Scale dual rows -->
+              <div class="form-grid-2">
+                <div class="form-group">
+                  <label for="service-select">Required Service Program</label>
+                  <select id="service-select" name="service" class="form-control">
+                    <option value="Site Development">Site Development</option>
+                    <option value="Pipe Installation">Pipe Installation</option>
+                    <option value="Material Sales">Material Sales</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="scale-input">Project Scope Scale</label>
+                  <input id="scale-input" type="text" name="scale" placeholder="e.g. 2 Acres, 150 LF" class="form-control" />
+                </div>
+              </div>
+
+              <!-- Message requirements -->
+              <div class="form-group">
+                <label for="notes-textarea">Specific Requirements or Message</label>
+                <textarea id="notes-textarea" name="notes" rows="4" placeholder="Please detail any soil excavation specs, utility piping scopes, or specific aggregate requests..." class="form-control"></textarea>
+              </div>
+
+              <!-- Bottom Row trigger actions -->
+              <div class="form-footer">
+                <p class="form-disclaimer">
+                  By submitting, you agree to allow LA Contractors crew to review your property grading on public records.
+                </p>
+                <button type="submit" class="btn-orange" id="submit-proposal-btn">
+                  <span>SUBMIT REQUEST</span>
+                  <i data-lucide="arrow-right"></i>
+                </button>
+              </div>
+
+            </form>
+
+            <!-- Success Panel State (Hidden by default) -->
+            <div class="success-panel" id="contact-success-panel">
+              <div class="success-icon-box">
+                <i data-lucide="check-circle"></i>
+              </div>
+
+              <div class="success-text-container">
+                <span class="success-badge">PROPOSAL RECEIVED SUCCESSFULLY</span>
+                <h3 class="success-title" id="success-client-name">Thank You, John!</h3>
+                <p class="success-desc">
+                  We have copy-routed your contract proposal request directly to our Brooksville estimation crew. An engineer will follow up with you within 24 working hours.
+                </p>
+              </div>
+
+              <!-- Ticket receipt box -->
+              <div class="success-receipt">
+                <div class="success-receipt-label">Proposal Reference ID</div>
+                <div class="success-receipt-code" id="success-ticket-id">LA-123456</div>
+                <div class="success-receipt-footer">
+                  State of Florida Dispatch Hub • UTC Timestamped
+                </div>
+              </div>
+
+              <button class="btn-slate-outline" onclick="resetBookingForm()">
+                <span>SUBMIT ANOTHER PROPOSAL</span>
+              </button>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 7. FOOTER SECTION -->
+  <footer id="app-footer">
+    <div class="container">
+      
+      <!-- Top Grid row links and brand details -->
+      <div class="footer-top-row">
+        
+        <!-- Brand column -->
+        <div class="footer-brand-sec" id="footer-brand-section">
+          <div class="footer-logo" onclick="scrollToTopSmooth()">
+            <div class="footer-logo-icon">
+              <i data-lucide="hard-hat"></i>
+            </div>
+            <span class="footer-logo-text">LA CONTRACTORS</span>
+          </div>
+          <p class="footer-brand-desc">
+            Brooksville’s trusted partner in complete site development, grading, excavations, and high-spec underground utilities. We build the infrastructure Florida thrives on.
+          </p>
+          <div class="footer-brand-lic">
+            <i data-lucide="shield-check"></i>
+            <span>Certified Florida Utility Contractor • Lic #CUC1224558</span>
+          </div>
+        </div>
+
+        <!-- Quick navigation -->
+        <div class="footer-links-sec" id="footer-links-section">
+          <h4 class="footer-sec-title">Quick Navigation</h4>
+          <div class="footer-nav-list">
+            <button onclick="scrollToSection('home')">HOME</button>
+            <button onclick="scrollToSection('about')">ABOUT</button>
+            <button onclick="scrollToSection('services')">SERVICES</button>
+            <button onclick="scrollToSection('pricing')">PRICING ESTIMATOR</button>
+            <button onclick="scrollToSection('work')">OUR WORK</button>
+            <button onclick="scrollToSection('contact')">CONTACT / BOOK NOW</button>
+          </div>
+        </div>
+
+        <!-- Coordinates Contact info -->
+        <div class="footer-contact-sec" id="footer-contact-section">
+          <h4 class="footer-sec-title">Contract Center</h4>
+          <ul class="footer-contact-list">
+            <li>
+              <i data-lucide="map-pin"></i>
+              <span>104 Cobb Road, Brooksville, FL 34601</span>
+            </li>
+            <li>
+              <i data-lucide="phone"></i>
+              <a href="tel:8134626154">(813) 462-6154</a>
+            </li>
+            <li>
+              <i data-lucide="mail"></i>
+              <a href="mailto:contract@lacontractors.com" class="lowercase">contract@lacontractors.com</a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Bottom row copyright lines and back to top -->
+      <div class="footer-bottom-row">
+        <div class="footer-copyright">
+          <p>© <span id="current-year">2026</span> LA Contractors. All rights reserved.</p>
+          <p class="sub-copyright">Brooksville's premier utility and earth clearing contractors. Built locally.</p>
+        </div>
+
+        <button class="back-to-top-btn" onclick="scrollToTopSmooth()" title="Scroll Back To Top">
+          <span>Back to Top</span>
+          <i data-lucide="arrow-up"></i>
+        </button>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ==================== INTERACTIVE JAVASCRIPT ==================== -->
+  <script>
+    // 1. Initializations
+    document.addEventListener("DOMContentLoaded", function() {
+      // Create initial Lucide SVG icons
+      lucide.createIcons();
+      
+      // Update copyright year dynamically
+      document.getElementById("current-year").textContent = new Date().getFullYear();
+      
+      // Compute initial Ballpark estimate on loading
+      calculateEstimate();
+      
+      // Start auto-cycling testimonials
+      startTestimonialAutoCycle();
+    });
+
+    // 2. Scroll event for sticky navigation background transparency
+    window.addEventListener("scroll", function() {
+      const header = document.getElementById("app-header");
+      const scrolled = window.scrollY > 20;
+      if (scrolled) {
+        header.classList.add("scrolled");
+      } else {
+        header.classList.remove("scrolled");
+      }
+      
+      // Spy Scroll: Highlight current active menu button
+      detectSpyScroll();
+    });
+
+    // Simple Spy scroll detection
+    function detectSpyScroll() {
+      const sections = ['home', 'about', 'services', 'pricing', 'work', 'contact'];
+      let activeSectionId = 'home';
+      
+      for (const sectionId of sections) {
+        const el = document.getElementById(sectionId);
+        if (el) {
+          const rect = el.getBoundingClientRect();
+          if (rect.top <= 120 && rect.bottom >= 120) {
+            activeSectionId = sectionId;
+            break;
+          }
+        }
+      }
+      
+      // Desktop active links highlighting
+      sections.forEach(id => {
+        const btn = document.getElementById(`nav-${id}`);
+        if (btn) {
+          if (id === activeSectionId) {
+            btn.classList.add("active");
+          } else {
+            btn.classList.remove("active");
+          }
+        }
+        
+        // Mobile active drawer highlights
+        const mobileBtn = document.getElementById(`mobile-nav-${id}`);
+        if (mobileBtn) {
+          if (id === activeSectionId) {
+            mobileBtn.classList.add("active");
+          } else {
+            mobileBtn.classList.remove("active");
+          }
+        }
+      });
+    }
+
+    // Smooth section scrolling helper with sticky offset adjustment
+    function scrollToSection(id) {
+      const element = document.getElementById(id);
+      if (element) {
+        const offset = 80; // sticky header offset height
+        const bodyRect = document.body.getBoundingClientRect().top;
+        const elementRect = element.getBoundingClientRect().top;
+        const elementPosition = elementRect - bodyRect;
+        const offsetPosition = elementPosition - offset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+      }
+    }
+
+    // Scroll back to absolute top smooth
+    function scrollToTopSmooth() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    }
+
+    // 3. Mobile Navigation Drawer menu toggle
+    let isMobileMenuOpen = false;
+    function toggleMobileMenu() {
+      isMobileMenuOpen = !isMobileMenuOpen;
+      const drawer = document.getElementById("mobile-menu-drawer");
+      const icon = document.getElementById("mobile-menu-icon");
+      
+      if (isMobileMenuOpen) {
+        drawer.classList.add("open");
+        icon.setAttribute("data-lucide", "x");
+      } else {
+        drawer.classList.remove("open");
+        icon.setAttribute("data-lucide", "menu");
+      }
+      lucide.createIcons(); // reload icons to switch x/menu
+    }
+
+    // Handle mobile button selection and scroll triggers
+    function mobileNavigate(id) {
+      toggleMobileMenu(); // close drawer
+      setTimeout(() => {
+        scrollToSection(id);
+      }, 100);
+    }
+
+    // 4. About Us section tab switcher state managers
+    const aboutTabsContent = {
+      history: {
+        subtitle: "Serving Hernando County since 2004",
+        title: "Roots in Brooksville, Built on Trust",
+        content: "Founded as a small family operation, LA Contractors has grown to become Brooksville’s premier choice for site work and utility infrastructure. We started with a single backhoe and a promise: treat every jobsite like it’s in our own backyard. Over two decades later, we have laid hundreds of miles of underground pipe and shaped the ground for local neighborhoods, shopping centers, and parks.",
+        bullets: [
+          "Over 20 years of active local operation",
+          "Built on client referrals and long-term contracts",
+          "100% locally owned and operated in Florida"
+        ]
+      },
+      values: {
+        subtitle: "Where heavy iron meets absolute accuracy",
+        title: "Precision Grade & Zero Compromise",
+        content: "We take pride in our precision. Underground utility work requires rigorous engineering and meticulous execution; we use cutting-edge grade technology and laser leveling systems to make sure every grade is perfect and every pipe runs true. Our team consists of highly certified operators who prioritize safety and durability over shortcuts.",
+        bullets: [
+          "Rigorous OSHA safety standards on all sites",
+          "State-of-the-art GPS grading & pipe-laying lasers",
+          "Highly skilled local crew of professional operators"
+        ]
+      },
+      community: {
+        subtitle: "Supporting Brooksville beyond the job site",
+        title: "Generations of Giving Back",
+        content: "We don’t just construct in Brooksville; we live here, raise our kids here, and invest our profits back into Hernando County. We sponsor local Little League teams, support regional agricultural fairs, and volunteer our heavy equipment and crew for community park restorations. We believe a strong business is a pillar that holds the community high.",
+        bullets: [
+          "Proud sponsors of Brooksville youth sports",
+          "Emergency response support for local flood clearance",
+          "Annual apprenticeship program for high school graduates"
+        ]
+      }
+    };
+
+    function switchAboutTab(tabId) {
+      // Toggle button classes
+      const tabs = ['history', 'values', 'community'];
+      tabs.forEach(id => {
+        const btn = document.getElementById(`about-tab-btn-${id}`);
+        if (id === tabId) {
+          btn.classList.add("active");
+        } else {
+          btn.classList.remove("active");
+        }
+      });
+
+      // Update text in panels with simple animation reload
+      const data = aboutTabsContent[tabId];
+      const panel = document.getElementById("about-tab-content-panel");
+      
+      // Temporarily remove and re-add for CSS fade animation
+      panel.style.animation = 'none';
+      panel.offsetHeight; // trigger reflow
+      panel.style.animation = null;
+
+      document.getElementById("tab-panel-subtitle").textContent = data.subtitle;
+      document.getElementById("tab-panel-title").textContent = data.title;
+      document.getElementById("tab-panel-content").textContent = data.content;
+
+      // Render custom bullets
+      const bulletsList = document.getElementById("tab-panel-bullets");
+      bulletsList.innerHTML = "";
+      data.bullets.forEach(b => {
+        const li = document.createElement("li");
+        li.className = "tab-panel-bullet";
+        li.innerHTML = '<i data-lucide="check-circle-2"></i><span>' + b + '</span>';
+        bulletsList.appendChild(li);
+      });
+      
+      lucide.createIcons();
+    }
+
+    // 5. Services Details modal opening triggers
+    const servicesData = {
+      'site-dev': {
+        title: 'Site Development',
+        description: 'Comprehensive clearing, excavation, and structural grading for commercial and residential foundations.',
+        fullDetails: 'Our Site Development team possesses the heavy horsepower and engineering precision required to turn raw Florida woodland into build-ready foundations. We handle tree removal, structural leveling, lime rock base layout, and full retention pond excavation. Operating a modern fleet equipped with automated grade controls, we guarantee the highest precision for drainage profiles and load-bearing requirements.',
+        image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=600&q=80',
+        priceRange: '$5,000 - $150,000+',
+        specs: [
+          'Site Clearing & Grubbing',
+          'Erosion Control & Silt Fencing',
+          'Mass Earthwork & Rough Grading',
+          'Structural Pad Stabilization',
+          'Retention Basin Digging'
+        ]
+      },
+      'pipe-install': {
+        title: 'Pipe Installation',
+        description: 'High-integrity storm drainage, sewer lines, fire mains, and underground potable water mains.',
+        fullDetails: 'Underground utility installation is our signature craft. We lay high-diameter concrete piping (RCP), PVC sewer installations, ductile iron water lines, and sanitary tie-ins. Our experienced pipe crew uses state-of-the-art pipe lasers and trench boxes to protect operators and ensure exact fall-rates. We have a solid record of compliance with Hernando County codes and Florida environmental mandates.',
+        image: 'https://images.unsplash.com/photo-1581094288338-2314dddb7ecc?auto=format&fit=crop&w=600&q=80',
+        priceRange: '$8,000 - $200,000+',
+        specs: [
+          'Stormwater RCP Installation',
+          'Gravity Sanitary Sewers',
+          'Underground Fire Service Mains',
+          'Force Mains & Lift Stations',
+          'Trench Safety & De-watering'
+        ]
+      },
+      'material-sales': {
+        title: 'Material Sales',
+        description: 'Direct dispatch of lime rock, crushed aggregate, screened fill-dirt, washed sand, and topsoil.',
+        fullDetails: 'Need reliable heavy supplies delivered on-schedule? We sell and deliver premium Florida structural materials directly to your site or home. Whether you need aggregate for a driveway, clean fill-dirt for elevation leveling, or local lime rock for subgrade stabilization, we provide flexible truckloads (single axle, tandem, or semi-dumps) with prompt dispatch and clear volume billing.',
+        image: 'https://images.unsplash.com/photo-1578328819058-b69f3a3b0f6b?auto=format&fit=crop&w=600&q=80',
+        priceRange: '$350 - $4,500+ (load)',
+        specs: [
+          'Florida DOT Approved Lime Rock',
+          '#57 Crushed Concrete / Granite',
+          'Clean Structural Fill-Dirt',
+          'Screened Topsoil & Red Clay',
+          'Tailgate Spreading Available'
+        ]
+      }
+    };
+
+    function openServiceModal(serviceKey) {
+      const modal = document.getElementById("service-details-modal");
+      const data = servicesData[serviceKey];
+      
+      document.getElementById("modal-banner-img").src = data.image;
+      document.getElementById("modal-service-title").textContent = data.title;
+      document.getElementById("modal-service-details").textContent = data.fullDetails;
+      document.getElementById("modal-cost-price").textContent = data.priceRange;
+
+      // Populate spec bullets list
+      const specsList = document.getElementById("modal-specs-list");
+      specsList.innerHTML = "";
+      data.specs.forEach(s => {
+        const li = document.createElement("li");
+        li.className = "modal-spec-item";
+        li.innerHTML = '<i data-lucide="check-circle-2"></i><span>' + s + '</span>';
+        specsList.appendChild(li);
+      });
+
+      // Bind dynamic Book Services button to close modal and pre-fill form
+      const bookBtn = document.getElementById("modal-book-now-trigger");
+      bookBtn.onclick = function() {
+        closeServiceModal();
+        bookServiceDirect(data.title);
+      };
+
+      // Show modal panel
+      modal.classList.add("open");
+      lucide.createIcons();
+    }
+
+    function closeServiceModal() {
+      const modal = document.getElementById("service-details-modal");
+      modal.classList.remove("open");
+    }
+
+    function closeModalOnOutsideClick(event) {
+      const container = document.querySelector(".modal-container");
+      if (event.target === event.currentTarget) {
+        closeServiceModal();
+      }
+    }
+
+    // Direct Booking helper
+    function bookServiceDirect(serviceName) {
+      const scaleInput = document.getElementById("scale-input");
+      const serviceSelect = document.getElementById("service-select");
+      const notesTextarea = document.getElementById("notes-textarea");
+
+      // Populate inputs
+      serviceSelect.value = serviceName;
+      scaleInput.value = "Standard Contract Run";
+      notesTextarea.value = "Proposal Request: " + serviceName + ". Booking a formal site walk evaluation or delivery coordination request.";
+
+      // Display Estimate Badge as general trigger indicators
+      document.getElementById("form-loaded-badge").style.display = "inline-block";
+
+      // Smooth scroll down
+      scrollToSection("contact");
+    }
+
+    // 6. Cost Estimator logic block
+    let activeEstimatorService = "site";
+    let activeEstimatorMaterial = "limerock";
+    const materialPrices = {
+      limerock: { name: 'DOT Lime Rock', perLoad: 380 },
+      crushed: { name: '#57 Crushed Concrete', perLoad: 450 },
+      filldirt: { name: 'Structural Fill-Dirt', perLoad: 280 },
+      topsoil: { name: 'Screened Gardening Topsoil', perLoad: 350 },
+    };
+
+    function setEstimatorService(serviceKey) {
+      activeEstimatorService = serviceKey;
+      
+      // Update toggle buttons active states
+      const keys = ['site', 'pipe', 'materials'];
+      keys.forEach(k => {
+        const btn = document.getElementById(`pricing-select-${k}`);
+        if (k === serviceKey) {
+          btn.classList.add("active");
+        } else {
+          btn.classList.remove("active");
+        }
+      });
+
+      // Show/Hide sliders groups
+      document.getElementById("slider-group-site").style.display = (serviceKey === "site") ? "block" : "none";
+      document.getElementById("slider-group-pipe").style.display = (serviceKey === "pipe") ? "block" : "none";
+      document.getElementById("slider-group-materials").style.display = (serviceKey === "materials") ? "block" : "none";
+
+      calculateEstimate();
+    }
+
+    function setEstimatorMaterial(materialKey) {
+      activeEstimatorMaterial = materialKey;
+      
+      const mKeys = ['limerock', 'crushed', 'filldirt', 'topsoil'];
+      mKeys.forEach(mk => {
+        const btn = document.getElementById(`pricing-material-${mk}`);
+        if (mk === materialKey) {
+          btn.classList.add("active");
+        } else {
+          btn.classList.remove("active");
+        }
+      });
+
+      calculateEstimate();
+    }
+
+    function calculateEstimate() {
+      let materials = 0;
+      let labor = 0;
+      let mobilization = 250;
+
+      if (activeEstimatorService === "site") {
+        const acreage = parseFloat(document.getElementById("pricing-acreage-slider").value);
+        document.getElementById("badge-site-acres").textContent = acreage + (acreage === 1 ? " Acre" : " Acres");
+        
+        materials = Math.round(acreage * 2800);
+        labor = Math.round(acreage * 4500);
+        mobilization = acreage > 3 ? 750 : 350;
+      } 
+      else if (activeEstimatorService === "pipe") {
+        const feet = parseInt(document.getElementById("pricing-feet-slider").value);
+        document.getElementById("badge-pipe-feet").textContent = feet + " Linear Feet";
+        
+        materials = Math.round(feet * 38);
+        labor = Math.round(feet * 52);
+        mobilization = feet > 200 ? 600 : 400;
+      } 
+      else if (activeEstimatorService === "materials") {
+        const loads = parseInt(document.getElementById("pricing-loads-slider").value);
+        document.getElementById("badge-materials-loads").textContent = loads + (loads === 1 ? " Load" : " Loads");
+        
+        const pricePerLoad = materialPrices[activeEstimatorMaterial].perLoad;
+        materials = pricePerLoad * loads;
+        labor = 80 * loads;
+        mobilization = 150;
+      }
+
+      const total = materials + labor + mobilization;
+
+      // Update calculations labels
+      document.getElementById("breakdown-materials").textContent = "$" + materials.toLocaleString();
+      document.getElementById("breakdown-labor").textContent = "$" + labor.toLocaleString();
+      document.getElementById("breakdown-mobilization").textContent = "$" + mobilization.toLocaleString();
+      document.getElementById("breakdown-total").textContent = "$" + total.toLocaleString();
+    }
+
+    // Lock in estimator results and copy values to Booking form
+    function lockInEstimate() {
+      const serviceSelect = document.getElementById("service-select");
+      const scaleInput = document.getElementById("scale-input");
+      const notesTextarea = document.getElementById("notes-textarea");
+      const totalAmount = document.getElementById("breakdown-total").textContent;
+
+      let serviceLabel = "";
+      let specLabel = "";
+
+      if (activeEstimatorService === "site") {
+        const acreage = document.getElementById("pricing-acreage-slider").value;
+        serviceLabel = "Site Development";
+        specLabel = acreage + " Acre(s) Clearing & Grading";
+      } 
+      else if (activeEstimatorService === "pipe") {
+        const feet = document.getElementById("pricing-feet-slider").value;
+        serviceLabel = "Pipe Installation";
+        specLabel = feet + " Linear Feet of Utility Piping";
+      } 
+      else if (activeEstimatorService === "materials") {
+        const loads = document.getElementById("pricing-loads-slider").value;
+        serviceLabel = "Material Sales";
+        specLabel = loads + " Truckloads Delivered - " + materialPrices[activeEstimatorMaterial].name;
+      }
+
+      // Populate form
+      serviceSelect.value = serviceLabel;
+      scaleInput.value = specLabel;
+      notesTextarea.value = "Automated Ballpark Estimate: " + totalAmount + ". Based on " + specLabel + ". Please confirm subgrade requirements and scheduling availability.";
+
+      // Display estimate badge
+      document.getElementById("form-loaded-badge").style.display = "inline-block";
+
+      // Scroll smoothly
+      scrollToSection("contact");
+    }
+
+    // 7. Portfolio Grid card filtering
+    function filterPortfolio(category) {
+      // Toggle button active filters
+      const filterMap = {
+        'All': 'all',
+        'Site Work': 'site-work',
+        'Underground Pipe': 'underground-pipe',
+        'Material Sales': 'material-sales'
+      };
+
+      Object.keys(filterMap).forEach(key => {
+        const btn = document.getElementById(`filter-btn-${filterMap[key]}`);
+        if (key === category) {
+          btn.classList.add("active");
+        } else {
+          btn.classList.remove("active");
+        }
+      });
+
+      // Show/Hide portfolio elements cards
+      const cards = document.querySelectorAll(".portfolio-card");
+      cards.forEach(card => {
+        const cardCat = card.getAttribute("data-category");
+        if (category === "All" || cardCat === category) {
+          card.classList.remove("hidden");
+        } else {
+          card.classList.add("hidden");
+        }
+      });
+    }
+
+    // 8. Testimonials carousel sliders
+    const testimonials = [
+      {
+        name: "Darrell Vance",
+        role: "Project Manager",
+        company: "Vance Commercial Properties",
+        quote: "LA Contractors is easily the most reliable site preparation crew in Hernando County. Their operator grade accuracy is unmatched. They excavated our foundation pads ahead of schedule and the civil engineers signed off with zero adjustments. A true Brooksville pillar.",
+        stars: 5,
+        avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=120&q=80"
+      },
+      {
+        name: "Sarah Mitchell",
+        role: "County Engineer Coordinator",
+        company: "Hernando Public Works (Consultant)",
+        quote: "Laying large diameter utility drainage near commercial corridors is highly risk-sensitive. LA Contractors followed state utility safety standards flawlessly, managed the trench boxes with care, and finished the pipe run with laser precision. Excellent contractors to work with.",
+        stars: 5,
+        avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=120&q=80"
+      },
+      {
+        name: "Gene Hollister",
+        role: "Owner & President",
+        company: "Hollister Agricultural Feed",
+        quote: "We ordered over 80 tons of DOT-grade lime rock for heavy tractor lanes. The team dispatched drivers who tailgate-spread it beautifully. They saved our operators hours of blade work. Great price, friendly local dispatch, honest company.",
+        stars: 5,
+        avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=120&q=80"
+      }
+    ];
+
+    let activeTestimonialIndex = 0;
+    let testimonialInterval;
+
+    function setTestimonial(index) {
+      activeTestimonialIndex = index;
+      const data = testimonials[index];
+
+      // Reset auto timer
+      clearInterval(testimonialInterval);
+      startTestimonialAutoCycle();
+
+      // Trigger re-render with active classes
+      const card = document.querySelector(".testimonial-card");
+      card.style.animation = "none";
+      card.offsetHeight;
+      card.style.animation = null;
+
+      // Update stars
+      const starsDiv = document.getElementById("testimonial-stars");
+      starsDiv.innerHTML = "";
+      for (let i = 0; i < data.stars; i++) {
+        starsDiv.innerHTML += '<i data-lucide="star" class="fill"></i>';
+      }
+
+      document.getElementById("testimonial-quote").textContent = '"' + data.quote + '"';
+      document.getElementById("testimonial-avatar").src = data.avatar;
+      document.getElementById("testimonial-avatar").alt = data.name;
+      document.getElementById("testimonial-name").textContent = data.name;
+      
+      const rolePara = document.getElementById("testimonial-role");
+      rolePara.innerHTML = data.role + ', <span>' + data.company + '</span>';
+
+      // Update indicators active dot
+      for (let i = 0; i < testimonials.length; i++) {
+        const dot = document.getElementById(`testimonial-dot-${i}`);
+        if (i === index) {
+          dot.classList.add("active");
+        } else {
+          dot.classList.remove("active");
+        }
+      }
+
+      lucide.createIcons();
+    }
+
+    function startTestimonialAutoCycle() {
+      testimonialInterval = setInterval(function() {
+        let nextIdx = (activeTestimonialIndex + 1) % testimonials.length;
+        setTestimonial(nextIdx);
+      }, 7000);
+    }
+
+    // 9. Form Submission Handler Simulation
+    function handleFormSubmit(event) {
+      event.preventDefault();
+      
+      const submitBtn = document.getElementById("submit-proposal-btn");
+      const clientName = document.getElementById("name-input").value;
+      
+      // Update button state to loading spinner
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<i data-lucide="loader-2" class="spinner"></i><span>SENDING PROPOSAL...</span>';
+      lucide.createIcons();
+
+      // Simulate a robust database write delay
+      setTimeout(function() {
+        // Hide standard form
+        document.getElementById("contact-proposal-form").style.display = "none";
+        
+        // Show Success screen panel
+        const successPanel = document.getElementById("contact-success-panel");
+        successPanel.style.display = "flex";
+
+        // Display client name
+        document.getElementById("success-client-name").textContent = "Thank You, " + clientName.split(" ")[0] + "!";
+        
+        // Generate random proposal receipt ID code
+        const referenceId = "LA-" + Math.floor(100000 + Math.random() * 900000);
+        document.getElementById("success-ticket-id").textContent = referenceId;
+
+        // Reset button
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = '<span>SUBMIT REQUEST</span><i data-lucide="arrow-right"></i>';
+        lucide.createIcons();
+      }, 1500);
+    }
+
+    // Reset Form booking display
+    function resetBookingForm() {
+      // Clear inputs
+      document.getElementById("contact-proposal-form").reset();
+      
+      // Hide active Estimate loaded badge
+      document.getElementById("form-loaded-badge").style.display = "none";
+
+      // Toggle panels display
+      document.getElementById("contact-success-panel").style.display = "none";
+      document.getElementById("contact-proposal-form").style.display = "block";
+    }
+
+  </script>
+</body>
 </html>
