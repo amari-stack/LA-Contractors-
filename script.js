@@ -1,5 +1,3 @@
-import './index.css';
-
 // --- DATA STRUCTURES ---
 
 const aboutTabsData = {
@@ -108,7 +106,7 @@ const testimonialsData = [
 
 // --- STATE VARIABLE HOLDERS ---
 
-let currentCalcService: 'site' | 'pipe' | 'materials' = 'site';
+let currentCalcService = 'site';
 let activeTestimonialIndex = 0;
 
 
@@ -174,7 +172,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   tabButtons.forEach(btn => {
     btn.addEventListener('click', () => {
-      const selectedTab = btn.getAttribute('data-tab') as 'history' | 'values' | 'community';
+      const selectedTab = btn.getAttribute('data-tab');
       if (!selectedTab || !aboutTabsData[selectedTab]) return;
 
       // Update button visual styles
@@ -207,16 +205,16 @@ document.addEventListener('DOMContentLoaded', () => {
   // SERVICES DETAILS MODAL INTERACTION
   const serviceDetailsModal = document.getElementById('service-details-modal');
   const closeServiceModal = document.getElementById('close-service-modal');
-  const modalImg = document.getElementById('modal-img') as HTMLImageElement;
+  const modalImg = document.getElementById('modal-img');
   const modalTitle = document.getElementById('modal-title');
   const modalDesc = document.getElementById('modal-desc');
   const modalPrice = document.getElementById('modal-price');
   const modalSpecs = document.getElementById('modal-specs');
-  const modalBookBtn = document.getElementById('modal-book-btn') as HTMLButtonElement;
+  const modalBookBtn = document.getElementById('modal-book-btn');
 
   document.querySelectorAll('.service-details-btn').forEach(btn => {
     btn.addEventListener('click', () => {
-      const serviceId = btn.getAttribute('data-service') as 'site-dev' | 'pipe-install' | 'material-sales';
+      const serviceId = btn.getAttribute('data-service');
       if (!serviceId || !servicesDetailsData[serviceId]) return;
 
       const data = servicesDetailsData[serviceId];
@@ -260,12 +258,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   // BOOK NOW REDIRECT & PRE-FILL
-  const serviceSelect = document.getElementById('service-select') as HTMLSelectElement;
-  const scaleInput = document.getElementById('scale-input') as HTMLInputElement;
-  const notesTextarea = document.getElementById('notes-textarea') as HTMLTextAreaElement;
+  const serviceSelect = document.getElementById('service-select');
+  const scaleInput = document.getElementById('scale-input');
+  const notesTextarea = document.getElementById('notes-textarea');
   const estimateBadge = document.getElementById('estimate-loaded-badge');
 
-  const routeBookingForm = (serviceName: string, scaleText: string = '', noteText: string = '') => {
+  const routeBookingForm = (serviceName, scaleText = '', noteText = '') => {
     if (serviceSelect) {
       // Prefill values
       if (serviceName.includes('Material')) {
@@ -330,12 +328,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const pipeInputs = document.getElementById('calc-inputs-pipe');
   const materialsInputs = document.getElementById('calc-inputs-materials');
 
-  const siteAcreage = document.getElementById('site-acreage') as HTMLInputElement;
+  const siteAcreage = document.getElementById('site-acreage');
   const siteAcreageVal = document.getElementById('site-acreage-val');
-  const pipeLFInput = document.getElementById('pipe-linear-feet') as HTMLInputElement;
+  const pipeLFInput = document.getElementById('pipe-linear-feet');
   const pipeLFVal = document.getElementById('pipe-lf-val');
-  const materialTypeSelect = document.getElementById('material-type') as HTMLSelectElement;
-  const materialLoadsInput = document.getElementById('material-loads') as HTMLInputElement;
+  const materialTypeSelect = document.getElementById('material-type');
+  const materialLoadsInput = document.getElementById('material-loads');
   const materialLoadsVal = document.getElementById('material-loads-val');
 
   const costMaterials = document.getElementById('calc-cost-materials');
@@ -370,7 +368,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       computedScopeString = `${lf} Linear Feet of Utility Piping`;
     } else if (currentCalcService === 'materials') {
-      const type = (materialTypeSelect?.value || 'limerock') as keyof typeof materialPrices;
+      const type = materialTypeSelect?.value || 'limerock';
       const loads = Number(materialLoadsInput?.value || 5);
       if (materialLoadsVal) materialLoadsVal.innerText = `${loads} Loads`;
 
@@ -394,7 +392,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   calcTabs.forEach(tab => {
     tab.addEventListener('click', () => {
-      const targetService = tab.getAttribute('data-calc') as 'site' | 'pipe' | 'materials';
+      const targetService = tab.getAttribute('data-calc');
       if (!targetService) return;
 
       currentCalcService = targetService;
@@ -473,12 +471,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const testimonialQuote = document.getElementById('testimonial-quote');
   const testimonialName = document.getElementById('testimonial-name');
   const testimonialRole = document.getElementById('testimonial-role');
-  const testimonialAvatar = document.getElementById('testimonial-avatar') as HTMLImageElement;
+  const testimonialAvatar = document.getElementById('testimonial-avatar');
   const prevTestimonialBtn = document.getElementById('testimonial-prev-btn');
   const nextTestimonialBtn = document.getElementById('testimonial-next-btn');
   const dots = document.querySelectorAll('.testimonial-dot');
 
-  const displayTestimonial = (idx: number) => {
+  const displayTestimonial = (idx) => {
     activeTestimonialIndex = idx;
     const item = testimonialsData[idx];
 
@@ -529,16 +527,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // --- BOOKING FORM SUBMISSION ---
 
-  const bookingForm = document.getElementById('booking-form') as HTMLFormElement;
+  const bookingForm = document.getElementById('booking-form');
   const successPanel = document.getElementById('contact-success-panel');
   const successClientName = document.getElementById('success-client-name');
   const successTicketId = document.getElementById('success-ticket-id');
-  const submitProposalBtn = document.getElementById('submit-proposal-btn') as HTMLButtonElement;
+  const submitProposalBtn = document.getElementById('submit-proposal-btn');
 
   bookingForm?.addEventListener('submit', (e) => {
     e.preventDefault();
 
-    const nameVal = (document.getElementById('name-input') as HTMLInputElement)?.value || 'Partner';
+    const nameVal = document.getElementById('name-input')?.value || 'Partner';
 
     // Show sending proposal loading state
     if (submitProposalBtn) {
